@@ -2,12 +2,12 @@
    width: 100%;
    height: 100%;
    position: relative;
-   //overflow:hidden;
    background: url(../images/pc.jpg) no-repeat center/cover;
    .bg-shadow {
       width: 100%;
       height: 100%;
       background-color: rgba(0, 0, 0, 0.7);
+      z-index: 5;
    }
    .welcome-showcase {
       position: absolute;
@@ -67,27 +67,20 @@
       .welcome-showcase {
          h4 {
             font-size: 30px;
-            //margin-bottom: 1rem;
          }
          h1 {
             font-size: 50px;
-            //margin-bottom: 1rem;
          }
          left: 15%;
          .start {
             padding: 10px 30px;
             font-size: 22px;
-            //top: 60%;
+
             border: 3px solid #fff;
-            //background-color: transparent;
          }
       }
       .ham {
          display: none;
-      }
-      img {
-         width: 100%;
-         //height: 100%;
       }
    }
 }

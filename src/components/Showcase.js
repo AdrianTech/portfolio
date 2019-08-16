@@ -2,11 +2,28 @@ import React, { useContext } from "react";
 import "../Styles/Showcase.scss";
 import "../Styles/Navigation.scss";
 import { Context } from "../context";
+import me from "../images/me.jpg";
 
 const Showcase = () => {
-   const { handleBtnStart, changeNav, isClicked } = useContext(Context);
+   const { handleBtnStart, changeNav, isClicked, moveNavbar } = useContext(Context);
+   let navBehavior = "desktop";
+   if (moveNavbar) {
+      navBehavior += " showNavbar";
+   }
    return (
       <div id="showcase">
+         <header className={navBehavior}>
+            <nav>
+               <div className="image small">
+                  <img src={me} alt="author" />
+               </div>
+               <a href="#showcase">Home</a>
+               <a href="#about">O mnie</a>
+               <a href="#projects">Projekty</a>
+               <a href="#services">Usługi</a>
+               <a href="#contact">Kontakt</a>
+            </nav>
+         </header>
          <div className="bg-shadow" />
          <div className="welcome-showcase">
             <h4>Witam na AdrianTech</h4>
@@ -23,12 +40,3 @@ const Showcase = () => {
 };
 
 export default Showcase;
-// onClick={handleBtnStart}
-/* 
-{isClicked ? null : <Typing className='typing' speed={200} loop={1}>
-   <h1>Hello, Everyone.</h1>
-   <Typing.Backspace count={20} />
-   <h1>I'm self-taugh developer. What can I help you?</h1>
-   <Typing.Reset delay={500} />
-   </Typing>}
-*/

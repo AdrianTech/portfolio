@@ -6,7 +6,7 @@ export const Context = createContext();
 export class ContextProvider extends Component {
    state = {
       isClicked: false,
-      showNavbar: false,
+      moveNavbar: false,
       message: "",
       name: "",
       getContact: "",
@@ -14,26 +14,19 @@ export class ContextProvider extends Component {
       counter: 2
    };
    handleBtnStart = e => {
-      //console.log(e.target.className);
       const navTarget = e.target.className;
       if (navTarget === "start") window.location.hash = "about";
-      // else if (navTarget === "nav-home") window.location.hash = "showcase";
-      // else if (navTarget === "nav-about") window.location.hash = "about";
-      // else if (navTarget === "nav-projects") window.location.hash = "projects";
-      // else if (navTarget === "nav-services") window.location.hash = "#";
-      // else if (navTarget === "nav-contact") window.location.hash = "#";
    };
    handleScroll = () => {
       const scrollY = window.scrollY;
       const scrollX = window.innerWidth;
-      if (scrollY > 600 && scrollX >= 768) {
+      if (scrollY > 60 && scrollX >= 768) {
          this.setState({
-            showNavbar: true
+            moveNavbar: true
          });
-         //window.location.hash = "about";
       } else {
          this.setState({
-            showNavbar: false
+            moveNavbar: false
          });
          window.location.hash = "main";
       }
@@ -116,14 +109,14 @@ export class ContextProvider extends Component {
    };
 
    render() {
-      const { isClicked, showNavbar, message, getContact, name, info } = this.state;
+      const { isClicked, moveNavbar, message, getContact, name, info } = this.state;
       const { handleBtnStart, changeNav, handleScroll, handleForm, handleSubmit } = this;
 
       return (
          <Context.Provider
             value={{
                isClicked,
-               showNavbar,
+               moveNavbar,
                name,
                getContact,
                message,

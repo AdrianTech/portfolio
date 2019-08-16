@@ -4,7 +4,7 @@ import { Context } from "../context";
 import me from "../images/me.jpg";
 
 const Nav = () => {
-   const { changeNav, showNavbar, isClicked } = useContext(Context);
+   const { changeNav, moveNavbar, isClicked } = useContext(Context);
    const style = {
       opacity: "1"
    };
@@ -19,10 +19,6 @@ const Nav = () => {
    let anim = "";
    if (isClicked) {
       anim += "animated slideInLeft";
-   }
-   let showNav = "desktop";
-   if (showNavbar) {
-      showNav += " showNavbar";
    }
 
    return (
@@ -51,18 +47,6 @@ const Nav = () => {
                </ul>
             </nav>
             <div className="lang" />
-         </header>
-         <header className={showNav}>
-            <nav>
-               <div className="image small">
-                  <img src={me} alt="author" />
-               </div>
-               <a href="#showcase">Home</a>
-               <a href="#about">O mnie</a>
-               <a href="#projects">Projekty</a>
-               <a href="#services">Usługi</a>
-               <a href="#contact">Kontakt</a>
-            </nav>
          </header>
       </>
    );

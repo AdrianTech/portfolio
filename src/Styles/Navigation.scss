@@ -2,19 +2,21 @@ $navFontColor: #dbcaca;
 $bg-nav-color: #dce7c9;
 $border-color: #575252;
 .desktop {
-   display: none;
+   position: absolute;
+   top: 0;
+   visibility: hidden;
 }
 header.mobile-header {
    transform: translate3d(-200%, 0, 0);
    position: fixed;
    color: $navFontColor;
    height: 100%;
-   width: 60%;
-   background-color: #070708;
+   width: 50%;
+   background-color: #202020;
    padding: 10px;
    opacity: 0;
    box-shadow: 0 15px 27px rgba(252, 249, 249, 0.3);
-   z-index: 1;
+   z-index: 11;
 
    .lang {
       position: absolute;
@@ -60,10 +62,7 @@ nav {
       transition: transform 0.3s linear;
       will-change: transform;
       &:hover {
-         //background: #dfdfe2;
-         // text-decoration: underline;
          color: #fff;
-         //margin-left: 20px;
          transform: scale(1.1) translateX(8%);
       }
    }
@@ -92,36 +91,38 @@ nav {
 @media (min-width: 768px) {
    .desktop {
       width: 100%;
-      background-color: #070708;
-      position: fixed;
-      //top: 0;
       display: flex;
       z-index: 15;
-      transform: translateY(-100%);
-      // opacity: 1;
+      border-bottom: 2px solid #313022;
+      visibility: visible;
+      transition: background-color 0.4s ease-in-out;
+      will-change: background-color;
    }
    .showNavbar {
-      transform: translateY(0);
-      animation: showNav 0.3s linear;
-      @keyframes showNav {
-         0% {
-            transform: translateY(-100%);
-         }
-         50% {
-            transform: translateY(-50%);
-         }
-         100% {
-            transform: translateY(0);
-         }
-      }
+      background-color: #070708;
+      border-bottom: none;
+      position: fixed;
+
+      // @keyframes showNav {
+      //    0% {
+      //       transform: translateY(-100%);
+      //    }
+      //    50% {
+      //       transform: translateY(-50%);
+      //    }
+      //    100% {
+      //       transform: translateY(0);
+      //    }
+      // }
    }
    nav {
       display: flex;
       justify-content: space-evenly;
       a {
+         font-family: "Lato";
          text-decoration: none;
-         font-size: 22px;
-         padding: 15px 20px;
+         font-size: 25px;
+         padding: 17px 20px;
          color: #fff;
          transition: all ease 0.4s;
          &:hover {
@@ -130,7 +131,7 @@ nav {
          }
       }
       .small {
-         margin-top: 13px;
+         margin-top: 12px;
          width: 40px;
          height: 40px;
          img {

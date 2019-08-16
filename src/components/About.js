@@ -14,12 +14,11 @@ const About = props => (
    <section id="about">
       <h2>Poznaj mnie</h2>
       <h3>Cześć, mam na imię Adrian...</h3>
-      {/* <h4>W czym mogę Ci pomóc?</h4> */}
       <div className="introduce-myself">
          <ScrollAnimation animateOnce={true} animateIn="bounceIn" delay={500}>
             <div className="foto" />
          </ScrollAnimation>
-         <ScrollAnimation animateOnce={true} animateIn="bounceInUp" delay={450}>
+         <ScrollAnimation animateOnce={true} animateIn="zoomIn" delay={400}>
             <div className="text-about">
                <p>
                   Zajmuję się tworzeniem stron www i rozwijam swoje umiejętności w kierunku budowania aplikacji webowych zarówno po stronie
@@ -27,28 +26,23 @@ const About = props => (
                   Node.js - Express. Chcę się stale doskonalić, dlatego szukam nowych wyzwań... jeżeli potrzebujesz strony internetowej dla
                   swojej firmy bądź szukasz developera do swojego projektu, daj mi znać, klikając link poniżej
                </p>
-               {/* <p>
-                  Zacząłem uczyć się programowania na początku roku 2018. Pierwsze kroki stawiałem w HTML-u i CSS-ie, lecz wkrótce
-                  zrozumiałem, że prawdziwe programowanie zaczyna od JavaScriptu, języka, który daje wielkie możliwośći we współczesnym
-                  frontendzie, a także backendzie.
-               </p>
-               <p>
-                  Teraz sprawnie poruszam się w JavaScripcie i jego bibliotece - Reakcie. Wykorzystuję najnowsze rozwiązania dostępne w
-                  ramach danego języka. Pragnę zdobyć nowe doświadczenia, dlatego jeżeli poszukujesz frontend developera do swojego projektu
-                  lub strony internetowej dla Twojej firmy, kliknij <a href="#contact">tutaj</a>. Możesz sprawdzić kilka moich
-                  najciekawszych projektów <a href="#projects">tutaj.</a>{" "}
-               </p> */}
                <div className="about-icons">
-                  <a href="https://github.com/AdrianTech" target="_blank" rel="noopener noreferrer">
-                     <i className="fab fa-github" />
-                  </a>
-                  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                     <i className="fab fa-facebook" />
-                  </a>
+                  <ScrollAnimation animateOnce={true} animateIn="zoomIn" delay={700}>
+                     <a href="https://github.com/AdrianTech" target="_blank" rel="noopener noreferrer">
+                        <i className="fab fa-github" />
+                     </a>
+                  </ScrollAnimation>
+                  <ScrollAnimation animateOnce={true} animateIn="zoomIn" delay={1000}>
+                     <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                        <i className="fab fa-facebook" />
+                     </a>
+                  </ScrollAnimation>
                </div>
-               <a className="contact-nav" href="#contact">
-                  Skontaktuj się ze mną
-               </a>
+               <ScrollAnimation animateOnce={true} animateIn="zoomIn" delay={1300}>
+                  <a className="contact-nav" href="#contact">
+                     Skontaktuj się ze mną
+                  </a>
+               </ScrollAnimation>
             </div>
          </ScrollAnimation>
       </div>
