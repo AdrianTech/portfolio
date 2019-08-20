@@ -37,8 +37,8 @@
    }
 }
 form {
-   display: grid;
-   grid-template-columns: 1fr;
+   display: flex;
+   flex-direction: column;
    padding-bottom: 30px;
    width: 95%;
    & > * {
@@ -67,6 +67,7 @@ form {
    textarea {
       height: 10em;
       font-size: 15px;
+      width: 100%;
    }
    .form-btn {
       margin-top: 20px;
