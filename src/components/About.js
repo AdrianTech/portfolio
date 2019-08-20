@@ -22,9 +22,9 @@ const About = props => (
             <div className="text-about">
                <p>
                   Zajmuję się tworzeniem stron www i rozwijam swoje umiejętności w kierunku budowania aplikacji webowych zarówno po stronie
-                  frontendu, jak i backendu. Najczęściej korzystam z biblioteki JavaScript - React, po stronie serwera zaś z frameworka
-                  Node.js - Express. Chcę się stale doskonalić, dlatego szukam nowych wyzwań... jeżeli potrzebujesz strony internetowej dla
-                  swojej firmy bądź szukasz developera do swojego projektu, daj mi znać, klikając link poniżej
+                  frontendu, jak i backendu. Najczęściej korzystam z biblioteki JavaScript - React, po stronie serwera zaś z Expressa,
+                  frameworka Node.js. Chcę stale doskonalić swoje umiejętności, dlatego szukam nowych wyzwań... jeżeli potrzebujesz strony
+                  internetowej dla swojej firmy bądź szukasz developera do swojego projektu, daj mi znać, klikając link poniżej...
                </p>
                <div className="about-icons">
                   <ScrollAnimation animateOnce={true} animateIn="zoomIn" delay={700}>
@@ -93,7 +93,7 @@ const About = props => (
             </ScrollAnimation>
             <ScrollAnimation animateOnce={true} animateIn="flipInX" delay={700}>
                <div className="smaller-items">
-                  <i class="fas fa-code fa-2x" />
+                  <i className="fas fa-code fa-2x" />
                   <p>Pozostałe</p>
                </div>
             </ScrollAnimation>

@@ -9,21 +9,21 @@ const Services = () => {
             <ul>
                <li>
                   <span>
-                     <i class="fas fa-check" />
+                     <i className="fas fa-check" />
                   </span>{" "}
                   Potrzebujesz strony internetowej dla swojej firmy?
                </li>
                <li>
                   {" "}
                   <span>
-                     <i class="fas fa-check" />
+                     <i className="fas fa-check" />
                   </span>{" "}
                   Jesteś artystą i pragniesz stworzyć swoją wirtualną wizytówkę?
                </li>
                <li>
                   {" "}
                   <span>
-                     <i class="fas fa-check" />
+                     <i className="fas fa-check" />
                   </span>{" "}
                   Jesteś organizacją pozarządową, klubem sportowym lub inną instytucją?
                </li>

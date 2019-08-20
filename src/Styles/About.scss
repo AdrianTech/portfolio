@@ -32,17 +32,24 @@ h2 {
       width: 160px;
       height: 250px;
       background: url(../images/light-bg.jpg) no-repeat center/cover;
-      margin: 15px auto;
+      margin: 35px auto;
    }
 }
 .contact-nav {
    text-decoration: none;
    color: #0952f1;
    display: block;
+   font-size: 16px;
    margin-top: 15px;
+   transition: color 0.35s ease-in-out;
+   &:hover {
+      color: #fff;
+      text-decoration: underline;
+   }
 }
 .text-about {
    flex-basis: 70%;
+   font-family: "Lato";
    line-height: 1.7;
    p:first-child {
       margin-bottom: 30px;
@@ -56,6 +63,7 @@ h2 {
 .about-icons {
    margin-top: 20px;
    border-radius: 5px;
+   display: flex;
    a {
       position: relative;
       width: 40px;
@@ -64,14 +72,19 @@ h2 {
       background-color: rgba(255, 255, 255, 0.1);
       border-radius: 50%;
       margin-right: 15px;
-      color: #b4d7ee;
+      color: #0952f1;
+      transition: background-color 0.35s ease-in, color 0.35s ease-in;
+      will-change: background-color, color;
       i {
          font-size: 18px;
-         color: #0952f1;
          position: absolute;
          top: 50%;
          left: 50%;
          transform: translate(-50%, -50%);
+      }
+      &:hover {
+         background-color: #fff;
+         color: #000;
       }
    }
 }
@@ -113,14 +126,12 @@ h2 {
       line-height: 1.7;
       padding: 70px 50px;
       flex-basis: 80%;
-      font-size: 17px;
+      font-size: 18px;
    }
    .about-icons {
-      display: flex;
       a {
          width: 60px;
          height: 60px;
-         color: #b4d7ee;
          font-size: 40px;
          i {
             font-size: 28px;
@@ -129,6 +140,9 @@ h2 {
    }
    .technology-stack h2 {
       font-size: 40px;
+   }
+   .contact-nav {
+      font-size: 23px;
    }
 }
 @media screen and (min-width: 1000px) {

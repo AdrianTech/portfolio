@@ -53,15 +53,16 @@ export class ContextProvider extends Component {
       const { name, getContact, message, counter } = this.state;
       this.validateForm();
       var template_params = {
-         name: name,
-         message: message,
-         getContact: getContact
+         name,
+         message,
+         getContact
       };
-      var service_id = "default_service";
-      var template_id = "my";
+      const service_id = "default_service";
+      const template_id = "my";
+      const user_ID = "user_YTcj4BTWFLGdTDcRKLExI";
       if (!this.validateForm()) return;
       else
-         emailjs.send(service_id, template_id, template_params).then(
+         emailjs.send(service_id, template_id, template_params, user_ID).then(
             e => {
                if (e.status === 200) {
                   this.setState({
@@ -75,7 +76,7 @@ export class ContextProvider extends Component {
             },
             () => {
                this.setState({
-                  info: { txt: "Coś poszło nie tak, spróbuj ponownie", request: true },
+                  info: { txt: "Coś poszło nie tak, spróbuj ponownie", request: false },
                   counter: counter + 1
                });
                if (counter > 3) {
@@ -93,11 +94,11 @@ export class ContextProvider extends Component {
          this.setState({
             info: {}
          });
-      }, 6000);
+      }, 4000);
    };
    validateForm = () => {
       const { message, name } = this.state;
-      if (name.trim().length < 3 || message.trim().length < 10) {
+      if (name.trim().length < 2 || message.trim().length < 10) {
          this.setState({
             info: { txt: "Za krótka wiadomość lub imię", request: false }
          });

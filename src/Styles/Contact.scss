@@ -29,10 +29,11 @@
       }
    }
    h4 {
-      margin-top: 30px;
+      margin: 50px;
       text-align: center;
       font-weight: 500;
-      font-size: 21px;
+      font-size: 16px;
+      opacity: 0.6;
    }
 }
 form {
@@ -57,6 +58,10 @@ form {
       color: beige;
       background-color: transparent;
       outline: none;
+      &::placeholder {
+         font-style: italic;
+         font-size: 15px;
+      }
    }
    textarea {
       height: 10em;
@@ -74,6 +79,9 @@ form {
       border-radius: 10px;
       border: 1px solid rgb(208, 224, 208);
       cursor: pointer;
+      &:disabled {
+         opacity: 0.5;
+      }
    }
 }
 @media (min-width: 768px) {
@@ -84,6 +92,10 @@ form {
       .contact-with-me {
          font-size: 27px;
          margin-top: 30px;
+      }
+      h4 {
+         font-size: 18px;
+         margin: 70px 0;
       }
    }
    form {

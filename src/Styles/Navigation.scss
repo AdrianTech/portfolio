@@ -12,30 +12,37 @@ header.mobile-header {
    color: $navFontColor;
    height: 100%;
    width: 50%;
-   background-color: #202020;
+   background-color: #141414;
    padding: 10px;
    opacity: 0;
    box-shadow: 0 15px 27px rgba(252, 249, 249, 0.3);
    z-index: 11;
 
-   .lang {
-      position: absolute;
-      width: 50px;
-      height: 50px;
-      bottom: 3%;
-      left: 10%;
-      transition: 0.7s ease;
-      &:hover::after {
-         content: "Zmień język";
-         //position: relative;
-         height: 60%;
-         width: 150px;
-         right: -50px;
-         color: red;
-         font-size: 14px;
-         //display: block;
-         background-color: #dbcaca;
-      }
+   // .lang {
+   //    position: absolute;
+   //    width: 50px;
+   //    height: 50px;
+   //    bottom: 3%;
+   //    left: 10%;
+   //    transition: 0.7s ease;
+   //    &:hover::after {
+   //       content: "Zmień język";
+   //       //position: relative;
+   //       height: 60%;
+   //       width: 150px;
+   //       right: -50px;
+   //       color: red;
+   //       font-size: 14px;
+   //       //display: block;
+   //       background-color: #dbcaca;
+   //    }
+   // }
+   h6 {
+      margin: 8px 4px;
+      color: #a8a685;
+      font-family: "Raleway";
+      letter-spacing: 2px;
+      //text-transform: uppercase;
    }
 }
 nav {
@@ -68,8 +75,8 @@ nav {
    }
    .image {
       margin: 10px 0 0 10px;
-      width: 90px;
-      height: 90px;
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
       border: 2px solid $border-color;
       line-height: 100px;
@@ -80,6 +87,7 @@ nav {
       overflow: hidden;
       img {
          position: absolute;
+         width: 120%;
          left: 57%;
          top: 50%;
          transform: translate(-50%, -50%);
@@ -93,7 +101,7 @@ nav {
       width: 100%;
       display: flex;
       z-index: 15;
-      border-bottom: 2px solid #313022;
+      border-bottom: 1px solid #6d6c60;
       visibility: visible;
       transition: background-color 0.4s ease-in-out;
       will-change: background-color;
@@ -121,7 +129,7 @@ nav {
       a {
          font-family: "Lato";
          text-decoration: none;
-         font-size: 25px;
+         font-size: 23px;
          padding: 17px 20px;
          color: #fff;
          transition: all ease 0.4s;

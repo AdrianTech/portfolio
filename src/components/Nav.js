@@ -4,7 +4,7 @@ import { Context } from "../context";
 import me from "../images/me.jpg";
 
 const Nav = () => {
-   const { changeNav, moveNavbar, isClicked } = useContext(Context);
+   const { changeNav, isClicked } = useContext(Context);
    const style = {
       opacity: "1"
    };
@@ -28,6 +28,7 @@ const Nav = () => {
                <div className="image">
                   <img src={me} alt="author" />
                </div>
+               <h6>AdrianTech</h6>
                <ul style={isClicked ? style : null} className={anim}>
                   <li>
                      <a href="#showcase">Home</a>
