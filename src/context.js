@@ -19,8 +19,8 @@ export class ContextProvider extends Component {
    };
    handleScroll = () => {
       const scrollY = window.scrollY;
-      const scrollX = window.innerWidth;
-      if (scrollY > 60 && scrollX >= 768) {
+      //const scrollX = window.innerWidth;
+      if (scrollY > 60) {
          this.setState({
             moveNavbar: true
          });
