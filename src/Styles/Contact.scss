@@ -1,5 +1,5 @@
 #contact {
-   padding: 0 4%;
+   padding: 0 5%;
    .showInfo {
       font-size: 14px;
       border-radius: 7px;
@@ -40,7 +40,6 @@ form {
    display: flex;
    flex-direction: column;
    padding-bottom: 30px;
-   width: 95%;
    & > * {
       margin: 5px;
    }
@@ -67,7 +66,6 @@ form {
    textarea {
       height: 10em;
       font-size: 15px;
-      width: 100%;
    }
    .form-btn {
       margin-top: 20px;

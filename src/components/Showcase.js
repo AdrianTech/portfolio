@@ -32,7 +32,7 @@ const Showcase = () => {
                Poznaj mnie
             </button>
          </div>
-         <div className="ham" style={{ margin: moveNavbar ? "10px" : "0" }}>
+         <div className="ham">
             <i onClick={changeNav} className={isClicked ? "fas fa-times" : "fas fa-bars"} />
          </div>
       </div>

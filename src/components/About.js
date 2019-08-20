@@ -15,10 +15,10 @@ const About = props => (
       <h2>Poznaj mnie</h2>
       <h3>Cześć, mam na imię Adrian...</h3>
       <div className="introduce-myself">
-         <ScrollAnimation animateOnce={true} animateIn="bounceIn" delay={500}>
+         <ScrollAnimation animateOnce={true} animateIn="bounceIn" delay={400}>
             <div className="foto" />
          </ScrollAnimation>
-         <ScrollAnimation animateOnce={true} animateIn="zoomIn" delay={400}>
+         <ScrollAnimation animateOnce={true} animateIn="zoomIn" delay={600}>
             <div className="text-about">
                <p>
                   Zajmuję się tworzeniem stron www i rozwijam swoje umiejętności w kierunku budowania aplikacji webowych zarówno po stronie
@@ -27,18 +27,18 @@ const About = props => (
                   internetowej dla swojej firmy bądź szukasz developera do swojego projektu, daj mi znać, klikając link poniżej...
                </p>
                <div className="about-icons">
-                  <ScrollAnimation animateOnce={true} animateIn="zoomIn" delay={700}>
+                  <ScrollAnimation animateOnce={true} animateIn="zoomIn" delay={800}>
                      <a href="https://github.com/AdrianTech" target="_blank" rel="noopener noreferrer">
                         <i className="fab fa-github" />
                      </a>
                   </ScrollAnimation>
-                  <ScrollAnimation animateOnce={true} animateIn="zoomIn" delay={1000}>
+                  <ScrollAnimation animateOnce={true} animateIn="zoomIn" delay={1200}>
                      <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
                         <i className="fab fa-facebook" />
                      </a>
                   </ScrollAnimation>
                </div>
-               <ScrollAnimation animateOnce={true} animateIn="zoomIn" delay={1300}>
+               <ScrollAnimation animateOnce={true} animateIn="zoomIn" delay={1400}>
                   <a className="contact-nav" href="#contact">
                      Skontaktuj się ze mną
                   </a>
@@ -61,13 +61,13 @@ const About = props => (
                   <p>CSS3</p>
                </div>
             </ScrollAnimation>
-            <ScrollAnimation animateOnce={true} animateIn="flipInY" delay={600}>
+            <ScrollAnimation animateOnce={true} animateIn="flipInY" delay={500}>
                <div className="items">
                   <img src={js} alt="" />
                   <p>JavaScript</p>
                </div>
             </ScrollAnimation>
-            <ScrollAnimation animateOnce={true} animateIn="flipInX" delay={700}>
+            <ScrollAnimation animateOnce={true} animateIn="flipInX" delay={600}>
                <div className="items">
                   <img src={react} alt="" />
                   <p>React.js</p>
@@ -85,13 +85,13 @@ const About = props => (
                   <p>VSCode</p>
                </div>
             </ScrollAnimation>
-            <ScrollAnimation animateOnce={true} animateIn="flipInX" delay={600}>
+            <ScrollAnimation animateOnce={true} animateIn="flipInX" delay={500}>
                <div className="smaller-items">
                   <img src={git} alt="" />
                   <p>Git</p>
                </div>
             </ScrollAnimation>
-            <ScrollAnimation animateOnce={true} animateIn="flipInX" delay={700}>
+            <ScrollAnimation animateOnce={true} animateIn="flipInX" delay={600}>
                <div className="smaller-items">
                   <i className="fas fa-code fa-2x" />
                   <p>Pozostałe</p>
