@@ -6,7 +6,7 @@
    .bg-shadow {
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.7);
+      background-color: rgba(0, 0, 0, 0.6);
       z-index: 5;
    }
    .welcome-showcase {
@@ -32,7 +32,6 @@
          background-color: rgba(253, 252, 252, 0.1);
          border-radius: 7px;
          outline: none;
-         cursor: pointer;
       }
    }
    img {
@@ -43,20 +42,17 @@
       position: fixed;
       right: 5%;
       top: 4%;
-      i {
-         font-size: 28px;
-      }
    }
    .fas {
-      cursor: pointer;
-      color: red;
+      color: #f0e5e5;
    }
 
    .fa-bars {
-      font-size: 25px;
+      font-size: 30px;
    }
    .fa-times {
-      font-size: 30px;
+      font-size: 35px;
+      color: #f54f4f;
    }
 }
 

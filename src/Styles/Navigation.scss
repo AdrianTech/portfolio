@@ -42,7 +42,6 @@ $border-color: #575252;
       color: $navFontColor;
       font-family: "Raleway";
       letter-spacing: 2px;
-      //text-transform: uppercase;
    }
 }
 nav {
@@ -60,8 +59,8 @@ nav {
       margin: 0 auto;
       display: block;
       text-decoration: none;
-      padding: 10px 10px;
-      font-size: 18px;
+      padding: 10px 8px;
+      font-size: 19px;
       font-weight: 700;
       text-transform: uppercase;
       transition: 0.3s all linear;
@@ -69,9 +68,8 @@ nav {
       transition: transform 0.3s linear;
       will-change: transform;
       &:hover {
-         //color: rgb(248, 24, 24);
          text-shadow: 0 0 5px;
-         transform: scale(1.15) translateX(10%);
+         transform: scale(1.15) translateX(8%);
       }
    }
    .image {
@@ -81,7 +79,6 @@ nav {
       border-radius: 50%;
       border: 2px solid $border-color;
       line-height: 100px;
-      text-align: center;
       font-size: 35px;
       color: black;
       position: relative;
@@ -145,5 +142,13 @@ nav {
 @media screen and (max-width: 550px) {
    .mobile-header {
       width: 50%;
+   }
+}
+@media screen and (max-width: 310px) {
+   .mobile-header {
+      width: 55%;
+   }
+   nav li a {
+      font-size: 18px;
    }
 }

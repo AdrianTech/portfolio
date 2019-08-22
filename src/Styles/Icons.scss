@@ -1,23 +1,17 @@
-@mixin flexCentered() {
-   display: flex;
-   justify-content: center;
-   flex-direction: column;
-}
-
 .icons {
    display: grid;
    grid-template-columns: repeat(2, 1fr);
    .items,
    .smaller-items {
-      text-align: center;
       font-weight: 500;
    }
    .animated {
       padding-bottom: 5px;
       &:last-child {
          color: #446ef7;
+         margin-top: 6px;
          p {
-            margin-top: 12px;
+            margin-top: 15px;
             color: #f6f8f8;
          }
       }
@@ -85,13 +79,13 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       i {
-         //width: 25%;
          padding: 10px;
-         //margin-bottom: 15px;
-         //text-align: center;
          &:last-child {
             font-style: normal;
          }
+      }
+      .animated:last-child {
+         margin-top: -7px;
       }
    }
 }

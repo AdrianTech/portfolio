@@ -22,6 +22,24 @@ body {
    height: 100vh;
    color: $primary-color;
 }
+.ham,
+.start,
+.form-btn {
+   cursor: pointer;
+}
+.introduce-myself,
+form,
+.about-icons,
+.hover-img {
+   display: flex;
+}
+.contact-with-me,
+.image,
+.items,
+.smaller-items,
+.showInfo {
+   text-align: center;
+}
 h2 {
    padding: 5px 0;
    width: 100%;
