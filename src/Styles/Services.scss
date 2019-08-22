@@ -2,7 +2,7 @@
    padding: 0 4%;
 }
 .offer {
-   color: rgb(201, 201, 191);
+   color: #ebebdd;
    margin: 25% auto;
    width: 80%;
    ul {
@@ -17,17 +17,23 @@
       }
    }
    h2 {
+      width: 100%;
       font-family: "Lato";
       background-color: transparent;
       margin-top: 20px;
       font-size: 17px;
-      opacity: 1;
       border: none;
       text-align: left;
-      color: #c0c7a5;
+      color: #f7ed9b;
       span {
-         font-size: 18px;
+         font-size: 11px;
       }
+   }
+   .moreInformation {
+      display: block;
+      padding-top: 20px;
+      font-size: 17px;
+      text-align: center;
    }
 }
 @media (min-width: 820px) {
@@ -44,6 +50,9 @@
       h2 {
          margin: 30px 0 0 68px;
          font-size: 30px;
+         span {
+            font-size: 18px;
+         }
       }
    }
 }

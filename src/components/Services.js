@@ -31,6 +31,7 @@ const Services = () => {
             <h2>
                Możesz ją mieć już za 400 zł <span>+ vat</span>
             </h2>
+            <span className="moreInformation">Aby poznać konkrety oferty, skontaktuj się z mną...</span>
          </div>
       </section>
    );

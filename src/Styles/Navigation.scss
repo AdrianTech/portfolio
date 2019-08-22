@@ -1,4 +1,4 @@
-$navFontColor: #dbcaca;
+$navFontColor: #f3efef;
 $bg-nav-color: #dce7c9;
 $border-color: #575252;
 .desktop {
@@ -6,12 +6,12 @@ $border-color: #575252;
    top: 0;
    visibility: hidden;
 }
-header.mobile-header {
+.mobile-header {
    transform: translate3d(-200%, 0, 0);
    position: fixed;
    color: $navFontColor;
    height: 100%;
-   width: 50%;
+   width: 35%;
    background-color: #141414;
    padding: 10px;
    opacity: 0;
@@ -39,7 +39,7 @@ header.mobile-header {
    // }
    h6 {
       margin: 8px 4px;
-      color: #a8a685;
+      color: $navFontColor;
       font-family: "Raleway";
       letter-spacing: 2px;
       //text-transform: uppercase;
@@ -65,12 +65,13 @@ nav {
       font-weight: 700;
       text-transform: uppercase;
       transition: 0.3s all linear;
-      color: #b3b0b0;
+      color: $navFontColor;
       transition: transform 0.3s linear;
       will-change: transform;
       &:hover {
-         color: #fff;
-         transform: scale(1.1) translateX(8%);
+         //color: rgb(248, 24, 24);
+         text-shadow: 0 0 5px;
+         transform: scale(1.15) translateX(10%);
       }
    }
    .image {
@@ -110,18 +111,6 @@ nav {
       background-color: #070708;
       border-bottom: none;
       position: fixed;
-
-      // @keyframes showNav {
-      //    0% {
-      //       transform: translateY(-100%);
-      //    }
-      //    50% {
-      //       transform: translateY(-50%);
-      //    }
-      //    100% {
-      //       transform: translateY(0);
-      //    }
-      // }
    }
    nav {
       display: flex;
@@ -153,5 +142,8 @@ nav {
       display: none;
    }
 }
-@media screen and (min-width: 1000px) {
+@media screen and (max-width: 550px) {
+   .mobile-header {
+      width: 50%;
+   }
 }
