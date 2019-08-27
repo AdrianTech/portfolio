@@ -8,6 +8,6 @@
 
 #### Description
 
-My portfolio wesbite. Another example of using JS library React, React Hooks, Context API and external service for sending emails directly from the client side.
+My portfolio website. Another example of using JS library React, React Hooks, Context API and external service for sending emails directly from the client side.
 
 #### [AdrianTech](https://adriantech.eu)
