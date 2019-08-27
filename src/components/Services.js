@@ -28,9 +28,7 @@ const Services = () => {
                   Jesteś organizacją pozarządową, klubem sportowym lub inną instytucją?
                </li>
             </ul>
-            <h2>
-               Możesz ją mieć już za 400 zł <span>+ vat</span>
-            </h2>
+            <h2>Możesz ją mieć już za 400 zł</h2>
             <span className="moreInformation">Aby poznać konkrety oferty, skontaktuj się z mną...</span>
          </div>
       </section>

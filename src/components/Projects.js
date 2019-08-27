@@ -9,7 +9,7 @@ const Projects = () => (
       <h2>Projekty</h2>
       <div className="projectsExamples">
          <div className="example">
-            <a href="https://oldtown.netlify.com/" target="_blank" rel="noopener noreferrer" className="thumbail">
+            <a href="//oldtown.netlify.com/" target="_blank" rel="noopener noreferrer" className="thumbail">
                <img src={oldTown} alt="oldTown" />
                <div className="hover-img">
                   <i className="fas fa-eye">
@@ -20,14 +20,14 @@ const Projects = () => (
             <div className="text">
                <h3>Old Town</h3>
                <p>Projekt aplikacji księgarni, pozwalający na przeglądanie, dodawanie i usuwanie książek z koszyka.</p>
-               <a href="https://github.com/AdrianTech/bookStore" target="_blank" rel="noopener noreferrer">
+               <a href="//github.com/AdrianTech/bookStore" target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-github" />
                   Zobacz kod na Github
                </a>
             </div>
          </div>
          <div className="example">
-            <a href="https://hit-words.netlify.com/" target="_blank" rel="noopener noreferrer" className="thumbail">
+            <a href="//hit-words.netlify.com/" target="_blank" rel="noopener noreferrer" className="thumbail">
                <img src={hitWords} alt="hitWords" />
                <div className="hover-img">
                   <i className="fas fa-eye">
@@ -38,14 +38,14 @@ const Projects = () => (
             <div className="text">
                <h3>Hit Words</h3>
                <p>Gra polegająca na wpisywaniu na czas wyświetlanego słowa w języku angielskim.</p>
-               <a href="https://github.com/AdrianTech/hitWords" target="_blank" rel="noopener noreferrer">
+               <a href="//github.com/AdrianTech/hitWords" target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-github" />
                   Zobacz kod na Github
                </a>
             </div>
          </div>
          <div className="example">
-            <a href="https://cloud-app.netlify.com/" target="_blank" rel="noopener noreferrer" className="thumbail">
+            <a href="//cloud-app.netlify.com/" target="_blank" rel="noopener noreferrer" className="thumbail">
                <img src={cloudApp} alt="cloudApp" />
                <div className="hover-img">
                   <i className="fas fa-eye">
@@ -56,7 +56,7 @@ const Projects = () => (
             <div className="text">
                <h3>Cloud App</h3>
                <p>Prosta aplikacja wyświetalająca pogodę dla danego miasta.</p>
-               <a href="https://github.com/AdrianTech/cloud-app" target="_blank" rel="noopener noreferrer">
+               <a href="//github.com/AdrianTech/cloud-app" target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-github" />
                   Zobacz kod na Github
                </a>

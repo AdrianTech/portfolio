@@ -12,7 +12,6 @@ import vscode from "../images/icons/vscode.png";
 
 const About = props => (
    <section id="about">
-      <h2>Poznaj mnie</h2>
       <h3>Cześć, mam na imię Adrian...</h3>
       <div className="introduce-myself">
          <ScrollAnimation animateOnce={true} animateIn="bounceIn" delay={400}>
@@ -23,20 +22,18 @@ const About = props => (
                <p>
                   Zajmuję się tworzeniem stron internetowych i rozwijam swoje umiejętności w kierunku budowania aplikacji webowych zarówno
                   po stronie frontendu, jak i backendu. Najczęściej korzystam z biblioteki JavaScript - React, po stronie serwera zaś z
-                  Expressa, frameworka Node.js. Chcę stale doskonalić swoje umiejętności, dlatego szukam nowych wyzwań...{" "}
-                  <p>
-                     Jeżeli potrzebujesz strony internetowej dla swojej firmy bądź szukasz developera do swojego projektu, daj mi znać,
-                     klikając link poniżej...
-                  </p>
+                  Expressa, frameworka Node.js. Chcę stale doskonalić swoje umiejętności, dlatego szukam nowych wyzwań...
+                  <br /> Jeżeli potrzebujesz strony internetowej dla swojej firmy bądź szukasz developera do swojego projektu, daj mi znać,
+                  klikając link poniżej...
                </p>
                <div className="about-icons">
                   <ScrollAnimation animateOnce={true} animateIn="zoomIn" delay={800}>
-                     <a href="https://github.com/AdrianTech" target="_blank" rel="noopener noreferrer">
+                     <a href="//github.com/AdrianTech" target="_blank" rel="noopener noreferrer">
                         <i className="fab fa-github" />
                      </a>
                   </ScrollAnimation>
                   <ScrollAnimation animateOnce={true} animateIn="zoomIn" delay={1200}>
-                     <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                     <a href="//facebook.com" target="_blank" rel="noopener noreferrer">
                         <i className="fab fa-facebook" />
                      </a>
                   </ScrollAnimation>
