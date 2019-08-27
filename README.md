@@ -5,6 +5,7 @@
 -  React.js
 -  Context API
 -  React Hooks
+-  Mobile-first
 
 #### Description
 
