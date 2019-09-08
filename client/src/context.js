@@ -1,5 +1,4 @@
 import React, { Component, createContext } from "react";
-import * as emailjs from "emailjs-com";
 
 export const Context = createContext();
 
@@ -19,7 +18,6 @@ export class ContextProvider extends Component {
    };
    handleScroll = () => {
       const scrollY = window.scrollY;
-      //const scrollX = window.innerWidth;
       if (scrollY > 60) {
          this.setState({
             moveNavbar: true
@@ -51,56 +49,56 @@ export class ContextProvider extends Component {
    handleSubmit = e => {
       e.preventDefault();
       const { name, getContact, message, counter } = this.state;
-      this.validateForm();
-      var template_params = {
-         name,
-         message,
-         getContact
-      };
-      const service_id = "default_service";
-      const template_id = "my";
-      const user_ID = "user_YTcj4BTWFLGdTDcRKLExI";
       if (!this.validateForm()) return;
-      else
-         emailjs.send(service_id, template_id, template_params, user_ID).then(
-            e => {
-               if (e.status === 200) {
-                  this.setState({
-                     info: { txt: "Twoja wiadomość została wysłana", request: true },
-                     name: "",
-                     message: "",
-                     getContact: ""
-                  });
-                  this.handleTimeout();
-               }
-            },
-            () => {
+      const data = {
+         name,
+         getContact,
+         message
+      };
+      fetch("/sendMail", {
+         method: "POST",
+         headers: {
+            "Content-Type": "application/json"
+         },
+         body: JSON.stringify(data)
+      })
+         .then(res => {
+            if (res.ok) {
                this.setState({
-                  info: { txt: "Coś poszło nie tak, spróbuj ponownie", request: false },
+                  info: { txt: "Twoja wiadomość została wysłana", response: true },
+                  name: "",
+                  message: "",
+                  getContact: ""
+               });
+               this.handleTimeout();
+               return res;
+            } else {
+               this.setState({
+                  info: { txt: "Coś poszło nie tak, spróbuj ponownie", response: false },
                   counter: counter + 1
                });
                if (counter > 3) {
-                  console.log(counter);
                   this.setState({
-                     info: { txt: "Występuje jakiś błąd. Proszę, skontaktuj się ze mną telefonicznie", request: false }
+                     info: { txt: "Występuje jakiś błąd. Proszę, skontaktuj się ze mną telefonicznie", response: false }
                   });
                }
                this.handleTimeout();
             }
-         );
+         })
+         .catch(err => err);
    };
    handleTimeout = () => {
       setTimeout(() => {
          this.setState({
             info: {}
          });
-      }, 4000);
+      }, 3500);
    };
    validateForm = () => {
       const { message, name } = this.state;
       if (name.trim().length < 2 || message.trim().length < 10) {
          this.setState({
-            info: { txt: "Za krótka wiadomość lub imię", request: false }
+            info: { txt: "Za krótka wiadomość lub imię", response: false }
          });
          this.handleTimeout();
          return false;

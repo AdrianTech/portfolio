@@ -10,11 +10,9 @@ const Nav = () => {
    };
    const navBar = {
       transform: "translate3d(0,0,0)",
-      transition: "all 0.4s linear",
+      transition: "transform 0.4s linear",
+      willChange: "transform",
       opacity: "1"
-   };
-   const hideBar = {
-      transition: "all 0.5s linear"
    };
    let anim = "";
    if (isClicked) {
@@ -23,7 +21,7 @@ const Nav = () => {
 
    return (
       <>
-         <header className="mobile-header" style={isClicked ? navBar : hideBar}>
+         <header className="mobile-header" style={isClicked ? navBar : null}>
             <nav onClick={changeNav}>
                <div className="image">
                   <img src={me} alt="author" />

@@ -1,35 +1,24 @@
 {
-  "name": "client",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "axios": "^0.18.0",
-    "emailjs-com": "^2.3.2",
-    "node-sass": "^4.11.0",
-    "react": "^16.8.3",
-    "react-animate-on-scroll": "^2.1.5",
-    "react-dom": "^16.8.3",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "^2.1.8"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "server.js",
-  "devDependencies": {},
-  "author": "AdrianTech",
-  "license": "ISC"
+   "name": "withbackend",
+   "version": "1.0.0",
+   "description": "",
+   "main": "app.js",
+   "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+   },
+   "repository": {
+      "type": "git",
+      "url": ""
+   },
+   "author": "",
+   "license": "ISC",
+   "bugs": {
+      "url": "https://github.com/AdrianTech/portfiolio/issues"
+   },
+   "homepage": "https://github.com/AdrianTech/portfiolio#readme",
+   "dependencies": {
+      "dotenv": "^8.1.0",
+      "express": "^4.17.1",
+      "nodemailer": "^6.3.0"
+   }
 }

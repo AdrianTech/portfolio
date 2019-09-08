@@ -6,8 +6,8 @@ const Contact = () => {
    const { message, name, getContact, handleSubmit, handleForm, info } = useContext(Context);
    const [isVisible, showPhoneNumber] = useState(false);
    let infoStyle = "showInfo";
-   if (info.request) infoStyle += " resultOk";
-   else if (info.request === false) infoStyle += " resultFalse";
+   if (info.response) infoStyle += " resultOk";
+   else if (info.response === false) infoStyle += " resultFalse";
    return (
       <>
          <section id="contact">
@@ -22,8 +22,8 @@ const Contact = () => {
             <form onSubmit={handleSubmit}>
                <label>Twoje imię</label>
                <input type="text" name="name" value={name} onChange={handleForm} placeholder="Minimum 2 znaki" />
-               <label>Twój email lub numer telefonu</label>
-               <input type="text" name="getContact" value={getContact} onChange={handleForm} />
+               <label>Kontakt</label>
+               <input type="text" name="getContact" value={getContact} onChange={handleForm} placeholder="Telefon, email etc..." />
                <label>Wiadomość</label>
                <textarea name="message" value={message} onChange={handleForm} placeholder="Minimum 10 znaków" />
                {info.txt && (
@@ -31,7 +31,7 @@ const Contact = () => {
                      <p>{info.txt}</p>
                   </div>
                )}
-               <button disabled={typeof info.request === "boolean"} className="form-btn">
+               <button disabled={typeof info.response === "boolean"} className="form-btn">
                   Wyślij
                </button>
             </form>

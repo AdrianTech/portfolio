@@ -26,7 +26,7 @@ const About = props => (
                   <br /> Jeżeli potrzebujesz strony internetowej dla swojej firmy bądź szukasz developera do swojego projektu, daj mi znać,
                   klikając link poniżej...
                </p>
-               <div className="about-icons">
+               {/* <div className="about-icons">
                   <ScrollAnimation animateOnce={true} animateIn="zoomIn" delay={800}>
                      <a href="//github.com/AdrianTech" target="_blank" rel="noopener noreferrer">
                         <i className="fab fa-github" />
@@ -37,7 +37,7 @@ const About = props => (
                         <i className="fab fa-facebook" />
                      </a>
                   </ScrollAnimation>
-               </div>
+               </div> */}
                <ScrollAnimation animateOnce={true} animateIn="zoomIn" delay={1400}>
                   <a className="contact-nav" href="#contact">
                      Skontaktuj się ze mną

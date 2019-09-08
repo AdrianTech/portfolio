@@ -39,7 +39,7 @@ h2 {
    text-decoration: none;
    color: #0952f1;
    display: block;
-   font-size: 16px;
+   font-size: 19px;
    margin-top: 15px;
    transition: color 0.35s ease-in-out;
    &:hover {
@@ -61,33 +61,33 @@ h2 {
       font-weight: 700;
    }
 }
-.about-icons {
-   margin-top: 20px;
-   border-radius: 5px;
-   a {
-      position: relative;
-      width: 40px;
-      height: 40px;
-      display: inline-block;
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 50%;
-      margin-right: 15px;
-      color: #0952f1;
-      transition: background-color 0.35s ease-in, color 0.35s ease-in;
-      will-change: background-color, color;
-      i {
-         font-size: 18px;
-         position: absolute;
-         top: 50%;
-         left: 50%;
-         transform: translate(-50%, -50%);
-      }
-      &:hover {
-         background-color: #fff;
-         color: #000;
-      }
-   }
-}
+// .about-icons {
+//    margin-top: 20px;
+//    border-radius: 5px;
+//    a {
+//       position: relative;
+//       width: 40px;
+//       height: 40px;
+//       display: inline-block;
+//       background-color: rgba(255, 255, 255, 0.1);
+//       border-radius: 50%;
+//       margin-right: 15px;
+//       color: #0952f1;
+//       transition: background-color 0.35s ease-in, color 0.35s ease-in;
+//       will-change: background-color, color;
+//       i {
+//          font-size: 18px;
+//          position: absolute;
+//          top: 50%;
+//          left: 50%;
+//          transform: translate(-50%, -50%);
+//       }
+//       &:hover {
+//          background-color: #fff;
+//          color: #000;
+//       }
+//    }
+// }
 .technology-stack {
    margin-top: 100px;
    display: block;
@@ -127,20 +127,21 @@ h2 {
       flex-basis: 80%;
       font-size: 18px;
    }
-   .about-icons {
-      a {
-         width: 60px;
-         height: 60px;
-         font-size: 40px;
-         i {
-            font-size: 28px;
-         }
-      }
-   }
+   // .about-icons {
+   //    a {
+   //       width: 60px;
+   //       height: 60px;
+   //       font-size: 40px;
+   //       i {
+   //          font-size: 28px;
+   //       }
+   //    }
+   // }
    .technology-stack h2 {
       font-size: 40px;
    }
    .contact-nav {
+      font-weight: 700;
       font-size: 23px;
    }
 }
