@@ -5,12 +5,12 @@
 -  React.js
 -  Context API
 -  React Hooks
+-  Mobile-first
 -  Node.js/Express
 -  Nodemailer
--  Mobile-first
 
 #### Description
 
-My portfolio website. Another example of using JS library React, React Hooks, Context API and Nodemailer for sending emails.
+My portfolio website. Another example of using JS library React, React Hooks, Context API and Nodemailer to sending emails from server-side.
 
 #### [AdrianTech](https://adriantech.eu)
