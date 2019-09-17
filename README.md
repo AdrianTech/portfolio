@@ -11,6 +11,6 @@
 
 #### Description
 
-My portfolio website. Another example of using JS library React, React Hooks, Context API and Nodemailer to sending emails from the server-side.
+My portfolio website. Another example of using JS library React, React Hooks, Context API and Nodemailer is used for sending emails from server-side.
 
 #### [AdrianTech](https://adriantech.eu)
