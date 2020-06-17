@@ -31,5 +31,6 @@
   "main": "server.js",
   "devDependencies": {},
   "author": "AdrianTech",
-  "license": "ISC"
+  "license": "ISC",
+  "proxy": "http://localhost:4444"
 }

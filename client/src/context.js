@@ -7,8 +7,6 @@ export class ContextProvider extends Component {
     isClicked: false,
     moveNavbar: false,
     message: "",
-    name: "",
-    getContact: "",
     info: {},
     counter: 2
   };
@@ -66,9 +64,7 @@ export class ContextProvider extends Component {
         if (res.ok) {
           this.setState({
             info: { txt: "Twoja wiadomość została wysłana", response: true },
-            name: "",
-            message: "",
-            getContact: ""
+            message: ""
           });
           this.handleTimeout();
           return res;
@@ -83,8 +79,7 @@ export class ContextProvider extends Component {
           if (counter > 3) {
             this.setState({
               info: {
-                txt:
-                  "Występuje jakiś błąd. Proszę, skontaktuj się ze mną telefonicznie",
+                txt: "Występuje jakiś błąd. Proszę, skontaktuj się ze mną telefonicznie",
                 response: false
               }
             });
@@ -102,10 +97,10 @@ export class ContextProvider extends Component {
     }, 3500);
   };
   validateForm = () => {
-    const { message, name } = this.state;
-    if (name.trim().length < 2 || message.trim().length < 10) {
+    const { message } = this.state;
+    if (message.trim().length < 10) {
       this.setState({
-        info: { txt: "Zbyt krótka wiadomość lub imię", response: false }
+        info: { txt: "Wiadomość powinna mieć do najmniej 10 znaków", response: false }
       });
       this.handleTimeout();
       return false;
@@ -115,29 +110,14 @@ export class ContextProvider extends Component {
   };
 
   render() {
-    const {
-      isClicked,
-      moveNavbar,
-      message,
-      getContact,
-      name,
-      info
-    } = this.state;
-    const {
-      handleBtnStart,
-      changeNav,
-      handleScroll,
-      handleForm,
-      handleSubmit
-    } = this;
+    const { isClicked, moveNavbar, message, info } = this.state;
+    const { handleBtnStart, changeNav, handleScroll, handleForm, handleSubmit } = this;
 
     return (
       <Context.Provider
         value={{
           isClicked,
           moveNavbar,
-          name,
-          getContact,
           message,
           info,
           handleForm,
