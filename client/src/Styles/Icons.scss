@@ -1,91 +1,91 @@
 .icons {
-   display: grid;
-   grid-template-columns: repeat(2, 1fr);
-   .items,
-   .smaller-items {
-      font-weight: 500;
-   }
-   .animated {
-      padding-bottom: 5px;
-      &:last-child {
-         color: #446ef7;
-         margin-top: 6px;
-         p {
-            margin-top: 15px;
-            color: #f6f8f8;
-         }
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  .items,
+  .smaller-items {
+    font-weight: 500;
+  }
+  .animated {
+    padding-bottom: 5px;
+    &:last-child {
+      color: #446ef7;
+      margin-top: 6px;
+      p {
+        margin-top: 15px;
+        color: #f6f8f8;
       }
-      &:nth-child(1)::after {
-         content: "Bootstrap\ATailwind";
-      }
-      &:nth-child(2)::after {
-         content: "Sass\AGulp\A Flex/Grid";
-      }
-      &:nth-child(3)::after {
-         content: "ES6+\AOOP\AREST API";
-      }
-      &:nth-child(4)::after {
-         content: "Gatsby.js\AReact-Router\A Context API\AReact Hooks\ARedux";
-         font-size: 12px;
-      }
-      &:nth-child(5)::after {
-         content: "Express.js\AMongoDB";
-      }
-      &:nth-child(6)::after {
-         content: "Atom\A CodeSandbox";
-      }
-      &:nth-child(7)::after {
-         content: "Github";
-      }
-      &:nth-child(8)::after {
-         content: "GraphQL\ATypeScript\AMobile-first";
-      }
-      &::after {
-         content: "";
-         display: block;
-         color: #f5e6e6;
-         width: 120px;
-         margin: 5px auto;
-         border-radius: 10px;
-         white-space: pre;
-         background: rgba(220, 213, 224, 0.2);
-         opacity: 0;
-         padding: 7px 0;
-         text-align: center;
-         font-size: 14px;
-         transition: all 0.3s linear;
-      }
-      &:hover::after {
-         opacity: 1;
-      }
-   }
-   .items {
-      font-size: 18px;
-      img {
-         width: 80px;
-         height: 80px;
-      }
-   }
-   .smaller-items {
-      font-size: 20px;
-      img {
-         width: 60px;
-         height: 60px;
-      }
-   }
+    }
+    &:nth-child(1)::after {
+      content: "Bootstrap\ATailwind";
+    }
+    &:nth-child(2)::after {
+      content: "Mobile-first\ASass\AGulp\A Flex/Grid";
+    }
+    &:nth-child(3)::after {
+      content: "ES6+\AOOP\AREST API\ATypeScript";
+    }
+    &:nth-child(4)::after {
+      content: "Gatsby.js\AReact-Router\A Context API\AReact Hooks\ARedux";
+      font-size: 12px;
+    }
+    &:nth-child(5)::after {
+      content: "Express.js\AMongoDB\AJWT";
+    }
+    &:nth-child(6)::after {
+      content: "Atom\A CodeSandbox";
+    }
+    &:nth-child(7)::after {
+      content: "Github";
+    }
+    &:nth-child(8)::after {
+      content: "GraphQL\AVue.js\AWordpress\AWebpack";
+    }
+    &::after {
+      content: "";
+      display: block;
+      color: #f5e6e6;
+      width: 120px;
+      margin: 5px auto;
+      border-radius: 10px;
+      white-space: pre;
+      background: rgba(220, 213, 224, 0.2);
+      opacity: 0;
+      padding: 7px 0;
+      text-align: center;
+      font-size: 14px;
+      transition: all 0.3s linear;
+    }
+    &:hover::after {
+      opacity: 1;
+    }
+  }
+  .items {
+    font-size: 18px;
+    img {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  .smaller-items {
+    font-size: 20px;
+    img {
+      width: 60px;
+      height: 60px;
+    }
+  }
 }
 @media (min-width: 768px) {
-   .icons {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      i {
-         padding: 10px;
-         &:last-child {
-            font-style: normal;
-         }
+  .icons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    i {
+      padding: 10px;
+      &:last-child {
+        font-style: normal;
       }
-      .animated:last-child {
-         margin-top: -7px;
-      }
-   }
+    }
+    .animated:last-child {
+      margin-top: -7px;
+    }
+  }
 }

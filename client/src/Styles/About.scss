@@ -1,153 +1,116 @@
 .foto {
-   width: 100%;
-   img {
-      width: 100%;
-   }
+  width: 100%;
+  img {
+    width: 100%;
+  }
 }
 h2 {
-   margin: 30px auto;
+  margin: 30px auto;
 }
 
 #about {
-   padding: 0 4%;
-   margin: 20px 0 50px 0;
-   h3,
-   h4 {
-      font-family: "Raleway";
-      text-align: center;
-   }
+  padding: 0 4%;
+  margin: 20px 0 50px 0;
+  h3,
+  h4 {
+    font-family: "Raleway";
+    text-align: center;
+  }
 
-   h3 {
-      margin-top: 10%;
-      font-size: 23px;
-   }
-   h4 {
-      font-size: 20px;
-   }
+  h3 {
+    margin-top: 10%;
+    font-size: 23px;
+  }
+  h4 {
+    font-size: 20px;
+  }
 }
 .introduce-myself {
-   flex-direction: column;
+  flex-direction: column;
 
-   .foto {
-      width: 160px;
-      height: 250px;
-      background: url(../images/light-bg.jpg) no-repeat center/cover;
-      margin: 35px auto;
-   }
+  .foto {
+    width: 160px;
+    height: 250px;
+    background: url(../images/light-bg.jpg) no-repeat center/cover;
+    margin: 35px auto;
+  }
 }
 .contact-nav {
-   text-decoration: none;
-   color: #0952f1;
-   display: block;
-   font-size: 19px;
-   margin-top: 15px;
-   transition: color 0.35s ease-in-out;
-   &:hover {
-      color: #fff;
-      text-decoration: underline;
-   }
+  text-decoration: none;
+  color: #0952f1;
+  display: block;
+  font-size: 19px;
+  margin-top: 15px;
+  transition: color 0.35s ease-in-out;
+  &:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
 }
 .text-about {
-   flex-basis: 70%;
-   font-family: "Lato";
-   line-height: 1.7;
-   font-size: 17px;
-   p:first-child {
-      margin-bottom: 30px;
-   }
-   p a {
-      text-decoration: none;
-      color: #91caf0;
-      font-weight: 700;
-   }
+  flex-basis: 70%;
+  font-family: "Lato";
+  line-height: 1.7;
+  font-size: 17px;
+  p:first-child {
+    margin-bottom: 30px;
+  }
+  p a {
+    text-decoration: none;
+    color: #91caf0;
+    font-weight: 700;
+  }
 }
-// .about-icons {
-//    margin-top: 20px;
-//    border-radius: 5px;
-//    a {
-//       position: relative;
-//       width: 40px;
-//       height: 40px;
-//       display: inline-block;
-//       background-color: rgba(255, 255, 255, 0.1);
-//       border-radius: 50%;
-//       margin-right: 15px;
-//       color: #0952f1;
-//       transition: background-color 0.35s ease-in, color 0.35s ease-in;
-//       will-change: background-color, color;
-//       i {
-//          font-size: 18px;
-//          position: absolute;
-//          top: 50%;
-//          left: 50%;
-//          transform: translate(-50%, -50%);
-//       }
-//       &:hover {
-//          background-color: #fff;
-//          color: #000;
-//       }
-//    }
-// }
 .technology-stack {
-   margin-top: 100px;
-   display: block;
-   h2 {
-      font-size: 30px;
-   }
+  margin-top: 100px;
+  display: block;
+  h2 {
+    font-size: 30px;
+  }
 }
 
 @media screen and (min-width: 820px) {
-   #about {
-      padding: 0 4%;
-      h3 {
-         font-size: 30px;
-         text-align: center;
-         margin-bottom: 20px;
-      }
-      h4 {
-         font-size: 25px;
-      }
-   }
-   .introduce-myself {
-      flex-direction: row;
-      margin: 0 auto;
-      width: 80%;
+  #about {
+    padding: 0 4%;
+    h3 {
+      font-size: 30px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    h4 {
+      font-size: 25px;
+    }
+  }
+  .introduce-myself {
+    flex-direction: row;
+    margin: 0 auto;
+    width: 80%;
 
-      .foto {
-         flex-basis: 20%;
-         height: 500px;
-         background-color: #fff;
-         margin-right: 30px;
-         margin-top: 60px;
-      }
-   }
-   .text-about {
-      line-height: 1.7;
-      padding: 70px 50px;
-      flex-basis: 80%;
-      font-size: 18px;
-   }
-   // .about-icons {
-   //    a {
-   //       width: 60px;
-   //       height: 60px;
-   //       font-size: 40px;
-   //       i {
-   //          font-size: 28px;
-   //       }
-   //    }
-   // }
-   .technology-stack h2 {
-      font-size: 40px;
-   }
-   .contact-nav {
-      font-weight: 700;
-      font-size: 23px;
-   }
+    .foto {
+      flex-basis: 20%;
+      height: 500px;
+      background-color: #fff;
+      margin-right: 30px;
+      margin-top: 60px;
+    }
+  }
+  .text-about {
+    line-height: 1.7;
+    padding: 70px 50px;
+    flex-basis: 80%;
+    font-size: 18px;
+  }
+  .technology-stack h2 {
+    font-size: 40px;
+  }
+  .contact-nav {
+    font-weight: 700;
+    font-size: 23px;
+  }
 }
 @media screen and (min-width: 1000px) {
-   .text-about {
-      font-size: 19px;
-      line-height: 2;
-   }
+  .text-about {
+    font-size: 19px;
+    line-height: 2;
+  }
 }

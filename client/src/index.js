@@ -4,11 +4,12 @@ import Main from "./Main";
 import { BrowserRouter as Router } from "react-router-dom";
 
 import "./styles.scss";
+import "./styles/main.scss";
 
 const rootElement = document.getElementById("wrapper");
 ReactDOM.render(
-   <Router>
-      <Main />
-   </Router>,
-   rootElement
+  <Router>
+    <Main />
+  </Router>,
+  rootElement
 );

@@ -1,52 +1,55 @@
 #services {
-   padding: 0 4%;
+  padding: 0 4%;
 }
 .offer {
-   color: #ebebdd;
-   margin: 25% auto;
-   width: 80%;
-   ul {
-      list-style: none;
-   }
-   li {
-      margin: 13px 0;
-      font-size: 15px;
-      span {
-         margin: 0 5px 0 5px;
-         color: #02b60b;
-      }
-   }
-   h2 {
-      width: 100%;
-      font-family: "Lato";
-      background-color: transparent;
-      margin: 20px 0;
-      font-size: 17px;
-      border: none;
-      text-align: center;
-      color: #f7ed9b;
-   }
-   .moreInformation {
-      display: block;
-      padding-top: 10px;
-      font-size: 17px;
-      text-align: center;
-   }
+  color: #ebebdd;
+  margin: 25% auto;
+  width: 80%;
+  ul {
+    list-style: none;
+  }
+  li {
+    margin: 13px 0;
+    font-size: 15px;
+    span {
+      margin: 0 5px 0 5px;
+      color: #02b60b;
+    }
+  }
+  h2 {
+    width: 100%;
+    font-family: "Lato";
+    background-color: transparent;
+    margin: 20px 0;
+    font-size: 17px;
+    border: none;
+    text-align: center;
+    color: #f7ed9b;
+  }
+  .moreInformation {
+    display: block;
+    padding-top: 10px;
+    font-size: 19px;
+    text-align: center;
+  }
 }
 @media (min-width: 820px) {
-   .offer {
-      margin: 15% auto;
-      width: 70%;
-      li {
-         font-size: 25px;
-         span {
-            margin: 0 20px 0 10px;
-            font-size: 30px;
-         }
+  .offer {
+    margin: 15% auto;
+    width: 70%;
+    li {
+      font-size: 25px;
+      span {
+        margin: 0 20px 0 10px;
+        font-size: 30px;
       }
-      h2 {
-         text-align: center;
-         font-size: 30px;
-      }
-   }
+    }
+    h2 {
+      text-align: center;
+      font-size: 30px;
+    }
+    .moreInformation {
+      font-size: 23px;
+    }
+  }
 }
