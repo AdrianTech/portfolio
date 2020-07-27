@@ -3,6 +3,8 @@ import hitWords from "../images/hit-words.png";
 import swapi from "../images/swapi.png";
 import oldTown from "../images/oldTown.png";
 import cloudApp from "../images/cloud-app.png";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 const Projects = () => {
   const [hoverHeight, setHeight] = React.useState([]);
@@ -12,7 +14,45 @@ const Projects = () => {
       let swapiHeight = document.querySelector(".swapiImg").clientHeight + 10;
       setHeight([boxHeight, swapiHeight]);
     }
-    ["load", "resize"].forEach(item => window.addEventListener(item, setHover));
+    ["load", "resize"].forEach((item) => window.addEventListener(item, setHover));
+  }, []);
+
+  React.useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const examples = document.querySelectorAll(".example");
+    const h2 = document.querySelector("#projects h2");
+    gsap.set([examples, h2], { autoAlpha: 0, ease: "circ" });
+    examples.forEach((i, index) => {
+      gsap.fromTo(
+        i,
+        {
+          xPercent: index % 2 === 0 ? -100 : 100,
+        },
+        {
+          duration: 0.8,
+          autoAlpha: 1,
+          xPercent: 0,
+          scrollTrigger: {
+            trigger: i,
+            start: "top center+=100",
+            // toggleActions: "play none none reverse",
+          },
+        }
+      );
+    });
+    gsap.fromTo(
+      h2,
+      { scale: 1.5 },
+      {
+        autoAlpha: 1,
+        scale: 1,
+        duration: 0.8,
+        scrollTrigger: {
+          trigger: "#projects",
+          start: "top center",
+        },
+      }
+    );
   }, []);
 
   return (

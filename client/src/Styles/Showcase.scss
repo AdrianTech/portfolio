@@ -1,81 +1,94 @@
 #showcase {
-   width: 100%;
-   height: 100%;
-   position: relative;
-   background: url(../images/pc.jpg) no-repeat center/cover;
-   .bg-shadow {
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.6);
-      z-index: 5;
-   }
-   .welcome-showcase {
-      position: absolute;
-      top: 30%;
-      left: 10%;
-      h1,
-      h4 {
-         margin-bottom: 7px;
-      }
-      h1 {
-         font-size: 24px;
-         text-align: left;
-         margin: 0;
-         opacity: 1;
-      }
-      .start {
-         padding: 10px 30px;
-         margin-top: 12px;
-         border: 2px solid grey;
-         font-size: 19px;
-         color: #fff;
-         background-color: rgba(253, 252, 252, 0.1);
-         border-radius: 7px;
-         outline: none;
-      }
-   }
-   img {
-      height: 100%;
-   }
-   .ham {
-      z-index: 100;
-      position: fixed;
-      right: 5%;
-      top: 4%;
-   }
-   .fas {
-      color: #f0e5e5;
-   }
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: url(../images/pc.jpg) no-repeat center/cover;
+  .bg-shadow {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+  }
+  .welcome-showcase {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    .fromTop {
+      margin-bottom: 10px;
+    }
+    h1,
+    h4 {
+      margin-bottom: 7px;
+    }
+    h1 {
+      font-size: 24px;
+      text-align: left;
+      margin: 0;
+      opacity: 1;
+    }
+    .start {
+      padding: 10px 30px;
+      margin-top: 12px;
+      border: 2px solid grey;
+      font-size: 19px;
+      color: #fff;
+      background-color: rgba(253, 252, 252, 0.1);
+      border-radius: 7px;
+      outline: none;
+    }
+  }
+  img {
+    height: 100%;
+  }
+  .ham {
+    z-index: 100;
+    position: fixed;
+    right: 5%;
+    top: 4%;
+  }
+  .fas {
+    color: #f0e5e5;
+  }
 
-   .fa-bars {
-      font-size: 30px;
-   }
-   .fa-times {
-      font-size: 38px;
-      color: #f13c3c;
-   }
+  .fa-bars {
+    font-size: 30px;
+  }
+  .fa-times {
+    font-size: 38px;
+    color: #f13c3c;
+  }
+}
+@media (min-width: 480px) {
+  #showcase .welcome-showcase {
+    h4 {
+      font-size: 21px;
+    }
+    h1 {
+      font-size: 35px;
+    }
+  }
 }
 
 @media screen and (min-width: 768px) {
-   #showcase {
-      font-family: "Raleway";
-      .welcome-showcase {
-         left: 15%;
-         h4 {
-            font-size: 30px;
-         }
-         h1 {
-            font-size: 50px;
-         }
-         .start {
-            padding: 10px 30px;
-            font-size: 22px;
+  #showcase {
+    font-family: "Raleway";
+    .welcome-showcase {
+      left: 15%;
+      h4 {
+        font-size: 30px;
+      }
+      h1 {
+        font-size: 50px;
+      }
+      .start {
+        padding: 10px 30px;
+        font-size: 22px;
 
-            border: 3px solid #fff;
-         }
+        border: 3px solid #fff;
       }
-      .ham {
-         display: none;
-      }
-   }
+    }
+    .ham {
+      display: none;
+    }
+  }
 }
