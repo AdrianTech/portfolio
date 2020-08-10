@@ -22,7 +22,7 @@ const About = () => (
             Chcę stale doskonalić swoje umiejętności, dlatego szukam nowych wyzwań...
             <br /> Jeżeli potrzebujesz strony internetowej dla swojej firmy bądź szukasz developera do swojego projektu, daj mi znać, klikając link poniżej...
           </p>
-          <ScrollAnimation animateOnce={true} animateIn="zoomIn" delay={1100}>
+          <ScrollAnimation animateOnce={true} animateIn="zoomIn" delay={300}>
             <a className="contact-nav" href="#contact">
               Skontaktuj się ze mną
             </a>

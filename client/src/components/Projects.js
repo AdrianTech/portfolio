@@ -35,7 +35,6 @@ const Projects = () => {
           scrollTrigger: {
             trigger: i,
             start: "top center+=100",
-            // toggleActions: "play none none reverse",
           },
         }
       );

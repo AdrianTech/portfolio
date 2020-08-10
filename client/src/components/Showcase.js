@@ -4,7 +4,7 @@ import me from "../images/me.jpg";
 import gsap from "gsap";
 
 const Showcase = () => {
-  const { handleBtnStart, changeNav, isClicked, moveNavbar } = useContext(Context);
+  const { handleBtnStart, changeNav, isClicked, moveNavbar, navigation } = useContext(Context);
   let navBehavior = "desktop";
   React.useEffect(() => {
     let tl = gsap.timeline({ defaults: { duration: 0.9 } });
@@ -20,11 +20,11 @@ const Showcase = () => {
           <div className="image small">
             <img src={me} alt="author" />
           </div>
-          <a href="#showcase">Home</a>
-          <a href="#about">O mnie</a>
-          <a href="#projects">Projekty</a>
-          <a href="#services">Usługi</a>
-          <a href="#contact">Kontakt</a>
+          <span onClick={() => navigation("showcase")}>Home</span>
+          <span onClick={() => navigation("about")}>O mnie</span>
+          <span onClick={() => navigation("projects")}>Projekty</span>
+          <span onClick={() => navigation("services")}>Usługi</span>
+          <span onClick={() => navigation("contact")}>Kontakt</span>
         </nav>
       </header>
       <div className="bg-shadow" />

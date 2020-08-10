@@ -18,32 +18,16 @@ $border-color: #575252;
   z-index: 17;
   transition: transform 0.5s;
   will-change: transform;
-
-  // .lang {
-  //    position: absolute;
-  //    width: 50px;
-  //    height: 50px;
-  //    bottom: 3%;
-  //    left: 10%;
-  //    transition: 0.7s ease;
-  //    &:hover::after {
-  //       content: "Zmień język";
-  //       //position: relative;
-  //       height: 60%;
-  //       width: 150px;
-  //       right: -50px;
-  //       color: red;
-  //       font-size: 14px;
-  //       //display: block;
-  //       background-color: #dbcaca;
-  //    }
-  // }
   h6 {
     margin: 8px 4px;
     color: $navFontColor;
     font-family: "Raleway";
     letter-spacing: 1px;
   }
+}
+li,
+span {
+  cursor: pointer;
 }
 nav {
   width: 100%;
@@ -56,7 +40,7 @@ nav {
       opacity: 1;
     }
   }
-  li a {
+  li {
     margin: 0 auto;
     display: block;
     text-decoration: none;
@@ -113,7 +97,7 @@ nav {
   nav {
     display: flex;
     justify-content: space-evenly;
-    a {
+    span {
       font-family: "Lato";
       text-decoration: none;
       font-size: 23px;
@@ -149,7 +133,7 @@ nav {
   .mobile-header {
     width: 55%;
   }
-  nav li a {
+  nav li {
     font-size: 18px;
   }
 }

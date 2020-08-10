@@ -8,23 +8,25 @@ export class ContextProvider extends Component {
     moveNavbar: false,
     message: "",
     info: {},
-    counter: 2
+    counter: 2,
   };
-  handleBtnStart = e => {
+  handleBtnStart = (e) => {
     const navTarget = e.target.className;
-    if (navTarget === "start") window.location.hash = "about";
+    if (navTarget === "start") this.navigation("about");
+  };
+  navigation = (id) => {
+    document.getElementById(id).scrollIntoView();
   };
   handleScroll = () => {
     const scrollY = window.scrollY;
     if (scrollY > 60) {
       this.setState({
-        moveNavbar: true
+        moveNavbar: true,
       });
     } else {
       this.setState({
-        moveNavbar: false
+        moveNavbar: false,
       });
-      window.location.hash = "main";
     }
   };
   componentDidMount() {
@@ -32,39 +34,39 @@ export class ContextProvider extends Component {
   }
 
   changeNav = () => {
-    this.setState(prevState => ({
-      isClicked: !prevState.isClicked
+    this.setState((prevState) => ({
+      isClicked: !prevState.isClicked,
     }));
   };
-  handleForm = e => {
+  handleForm = (e) => {
     const name = e.target.name;
     const value = e.target.value;
     this.setState({
-      [name]: value
+      [name]: value,
     });
   };
 
-  handleSubmit = e => {
+  handleSubmit = (e) => {
     e.preventDefault();
     const { name, getContact, message, counter } = this.state;
     if (!this.validateForm()) return;
     const data = {
       name,
       getContact,
-      message
+      message,
     };
     fetch("/sendMail", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(data)
+      body: JSON.stringify(data),
     })
-      .then(res => {
+      .then((res) => {
         if (res.ok) {
           this.setState({
             info: { txt: "Twoja wiadomość została wysłana", response: true },
-            message: ""
+            message: "",
           });
           this.handleTimeout();
           return res;
@@ -72,27 +74,27 @@ export class ContextProvider extends Component {
           this.setState({
             info: {
               txt: "Coś poszło nie tak, spróbuj ponownie",
-              response: false
+              response: false,
             },
-            counter: counter + 1
+            counter: counter + 1,
           });
           if (counter > 3) {
             this.setState({
               info: {
                 txt: "Występuje jakiś błąd. Proszę, skontaktuj się ze mną telefonicznie",
-                response: false
-              }
+                response: false,
+              },
             });
           }
           this.handleTimeout();
         }
       })
-      .catch(err => err);
+      .catch((err) => err);
   };
   handleTimeout = () => {
     setTimeout(() => {
       this.setState({
-        info: {}
+        info: {},
       });
     }, 3500);
   };
@@ -100,7 +102,7 @@ export class ContextProvider extends Component {
     const { message } = this.state;
     if (message.trim().length < 10) {
       this.setState({
-        info: { txt: "Wiadomość powinna mieć do najmniej 10 znaków", response: false }
+        info: { txt: "Wiadomość powinna mieć do najmniej 10 znaków", response: false },
       });
       this.handleTimeout();
       return false;
@@ -111,7 +113,7 @@ export class ContextProvider extends Component {
 
   render() {
     const { isClicked, moveNavbar, message, info } = this.state;
-    const { handleBtnStart, changeNav, handleScroll, handleForm, handleSubmit } = this;
+    const { handleBtnStart, changeNav, handleScroll, handleForm, handleSubmit, navigation } = this;
 
     return (
       <Context.Provider
@@ -124,7 +126,8 @@ export class ContextProvider extends Component {
           handleSubmit,
           handleBtnStart,
           changeNav,
-          handleScroll
+          handleScroll,
+          navigation,
         }}
       >
         {this.props.children}

@@ -3,12 +3,12 @@ import { Context } from "../context";
 import me from "../images/me.jpg";
 
 const Nav = () => {
-  const { changeNav, isClicked } = useContext(Context);
+  const { changeNav, isClicked, navigation } = useContext(Context);
   const style = {
-    opacity: "1"
+    opacity: "1",
   };
   const navBar = {
-    transform: "translate3d(0,0,0)"
+    transform: "translate3d(0,0,0)",
   };
   let anim = "";
   if (isClicked) {
@@ -24,24 +24,13 @@ const Nav = () => {
           </div>
           <h6>AdrianTech</h6>
           <ul style={isClicked ? style : null} className={anim}>
-            <li>
-              <a href="#showcase">Home</a>
-            </li>
-            <li>
-              <a href="#about">O mnie</a>
-            </li>
-            <li>
-              <a href="#projects">Projekty</a>
-            </li>
-            <li>
-              <a href="#services">Usługi</a>
-            </li>
-            <li>
-              <a href="#contact">Kontakt</a>
-            </li>
+            <li onClick={() => navigation("showcase")}>Home</li>
+            <li onClick={() => navigation("about")}>O mnie</li>
+            <li onClick={() => navigation("projects")}>Projekty</li>
+            <li onClick={() => navigation("services")}>Usługi</li>
+            <li onClick={() => navigation("contact")}>Kontakt</li>
           </ul>
         </nav>
-        <div className="lang" />
       </header>
     </>
   );
