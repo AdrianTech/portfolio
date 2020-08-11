@@ -12,36 +12,31 @@ section#projects {
     }
   }
 }
-.projectsExamples {
+.watch {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  padding: 7px 0;
+  background-color: #000000bd;
+  text-align: center;
+  transform: translateY(-100%);
+  transition: transform 0.4s;
+  will-change: transform;
+  span {
+    font-family: "Lato";
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 5px 11px;
+    background-color: rgb(26, 190, 4);
+    border-radius: 5px;
+  }
+}
+.projectExamples {
   width: 80%;
   margin: 80px auto;
   display: grid;
   grid-gap: 30px;
-}
-.hover-img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  color: #000;
-  font-weight: 700;
-  background-color: #f4f5f196;
-  opacity: 0;
-  text-align: center;
-  font-size: 30px;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s;
-  i {
-    font-size: 40px;
-    color: #000;
-    p {
-      font-size: 26px;
-    }
-  }
-  &:hover {
-    opacity: 1;
-  }
 }
 .example {
   display: grid;
@@ -49,6 +44,11 @@ section#projects {
   .thumbail {
     position: relative;
     width: 100%;
+    overflow: hidden;
+    &:hover > .watch {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
   img {
     width: 100%;
@@ -60,6 +60,7 @@ section#projects {
   margin-top: 15px;
   line-height: 1.5;
   a {
+    position: relative;
     margin-top: 16px;
     text-decoration: none;
     color: #b61111;
@@ -78,7 +79,13 @@ section#projects {
 }
 
 @media (min-width: 768px) {
-  .projectsExamples {
+  .watch {
+    padding: 15px 0;
+    span {
+      font-size: 18px;
+    }
+  }
+  .projectExamples {
     grid-gap: 100px;
     margin: 150px auto;
   }
@@ -95,14 +102,6 @@ section#projects {
       a {
         padding: 12px 16px;
         font-size: 19px;
-      }
-    }
-  }
-  .hover-img {
-    i {
-      font-size: 60px;
-      p {
-        font-size: 30px;
       }
     }
   }
