@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Context } from "../context";
-import me from "../images/me.jpg";
+import logo from "../images/short-logo.png";
 
 const Nav = () => {
   const { changeNav, isClicked, navigation } = useContext(Context);
@@ -19,10 +19,9 @@ const Nav = () => {
     <>
       <header className="mobile-header" style={isClicked ? navBar : null}>
         <nav onClick={changeNav}>
-          <div className="image">
-            <img src={me} alt="author" />
+          <div className="image-mobile">
+            <img src={logo} alt="author" />
           </div>
-          <h6>AdrianTech</h6>
           <ul style={isClicked ? style : null} className={anim}>
             <li onClick={() => navigation("showcase")}>Home</li>
             <li onClick={() => navigation("about")}>O mnie</li>

@@ -32,6 +32,20 @@ const Services = () => {
             <span>
               <i className="fas fa-check" />
             </span>{" "}
+            Masz pomysł na biznes - chcesz sprzedawać towar, ale nie masz sklepu?
+          </li>
+          <li>
+            {" "}
+            <span>
+              <i className="fas fa-check" />
+            </span>{" "}
+            Chcesz stworzyć i uzupełnić bazę danych?
+          </li>
+          <li>
+            {" "}
+            <span>
+              <i className="fas fa-check" />
+            </span>{" "}
             Jesteś artystą i pragniesz stworzyć swoją wirtualną wizytówkę?
           </li>
           <li>

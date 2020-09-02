@@ -17,7 +17,8 @@ const Contact = () => {
           {!isVisible && <span onClick={() => showPhoneNumber(true)}>Kliknij, by zobaczyć dane kontaktowe</span>}
           {isVisible && (
             <>
-              <i className="fas fa-mobile-alt" /> +48 795 883 411 <br></br> <i class="far fa-envelope"></i> dev@adriantech.eu
+              <i className="fas fa-mobile-alt" /> +48 579 066 723 <br></br> <i className="far fa-envelope"></i>
+              <a href="mailto:dev@adriantech.eu">dev@adriantech.eu</a>
             </>
           )}
         </div>

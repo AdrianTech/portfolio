@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Context } from "../context";
-import me from "../images/me.jpg";
+import { ReactComponent as Logo } from "../images/LOGO_LIGHT.svg";
 import gsap from "gsap";
 
 const Showcase = () => {
@@ -8,7 +8,7 @@ const Showcase = () => {
   let navBehavior = "desktop";
   React.useEffect(() => {
     let tl = gsap.timeline({ defaults: { duration: 0.9 } });
-    tl.from(".fromTop", { y: -50, stagger: 0.5, autoAlpha: 0, delay: 1 }).from(".start", { scale: 0 }, "-=0.5");
+    tl.from(".fromTop", { y: -50, stagger: 0.5, autoAlpha: 0, delay: 1 }).from(".start", { scale: 0 }, "-=0.5").to(".disappear", { autoAlpha: 0, duration: 1, xPercent: -200 }, "+=7");
   }, []);
   if (moveNavbar) {
     navBehavior += " showNavbar";
@@ -16,11 +16,10 @@ const Showcase = () => {
   return (
     <div id="showcase">
       <header className={navBehavior}>
+        <div className="image">
+          <Logo onClick={() => navigation("showcase")} />
+        </div>
         <nav>
-          <div className="image small">
-            <img src={me} alt="author" />
-          </div>
-          <span onClick={() => navigation("showcase")}>Home</span>
           <span onClick={() => navigation("about")}>O mnie</span>
           <span onClick={() => navigation("projects")}>Projekty</span>
           <span onClick={() => navigation("services")}>Usługi</span>

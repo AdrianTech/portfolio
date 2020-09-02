@@ -1,112 +1,116 @@
 #contact {
-   padding: 0 5%;
-   .showInfo {
-      font-size: 14px;
-      border-radius: 7px;
-      padding: 5px 10px;
-      font-weight: 700;
-      background-color: #1b1b1b;
-   }
-   .resultFalse {
-      border: 2px solid #a80324;
-      color: #e92c52;
-   }
-   .resultOk {
-      color: #77f577;
-      border: 2px solid #016e01;
-   }
-   .contact-with-me {
-      font-size: 20px;
-      margin-bottom: 20px;
+  padding: 0 5%;
+  .showInfo {
+    font-size: 14px;
+    border-radius: 7px;
+    padding: 5px 10px;
+    font-weight: 700;
+    background-color: #1b1b1b;
+  }
+  .resultFalse {
+    border: 2px solid #a80324;
+    color: #e92c52;
+  }
+  .resultOk {
+    color: #77f577;
+    border: 2px solid #016e01;
+  }
+  .contact-with-me {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: peachpuff;
+    a {
       color: peachpuff;
-      i {
-         margin-right: 20px;
-      }
-      span {
-         cursor: pointer;
-      }
-   }
-   h4 {
-      margin: 50px;
-      text-align: center;
-      font-weight: 500;
-      font-size: 16px;
-      opacity: 0.6;
-   }
+      text-decoration: none;
+    }
+    i {
+      margin-right: 20px;
+    }
+    span {
+      cursor: pointer;
+    }
+  }
+  h4 {
+    margin: 50px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    opacity: 0.6;
+  }
 }
 form {
-   flex-direction: column;
-   padding-bottom: 30px;
-   & > * {
-      margin: 5px;
-   }
-   label {
-      margin-top: 13px;
-      font-size: 16px;
-      color: #5274a7;
-   }
-   input,
-   textarea {
-      font-family: "Poppins";
-      padding: 7px 0;
-      font-size: 16px;
-      border: none;
-      border-bottom: 2px solid #ada1a1;
-      color: beige;
-      background-color: transparent;
-      outline: none;
-      &::placeholder {
-         font-style: italic;
-         font-size: 15px;
-      }
-   }
-   textarea {
-      height: 10em;
+  flex-direction: column;
+  padding-bottom: 30px;
+  & > * {
+    margin: 5px;
+  }
+  label {
+    margin-top: 13px;
+    font-size: 16px;
+    color: #5274a7;
+  }
+  input,
+  textarea {
+    font-family: "Poppins";
+    padding: 7px 0;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #ada1a1;
+    color: beige;
+    background-color: transparent;
+    outline: none;
+    &::placeholder {
+      font-style: italic;
       font-size: 15px;
-   }
-   .form-btn {
-      margin-top: 20px;
-      width: 30%;
-      padding: 5px 0px;
-      color: #000;
-      outline: none;
-      font-weight: 700;
-      font-size: 17px;
-      background-color: #5274a7;
-      border-radius: 10px;
-      border: 1px solid #d0e0d0;
-      &:disabled {
-         opacity: 0.5;
-      }
-   }
+    }
+  }
+  textarea {
+    height: 10em;
+    font-size: 15px;
+  }
+  .form-btn {
+    margin-top: 20px;
+    width: 30%;
+    padding: 5px 0px;
+    color: #000;
+    outline: none;
+    font-weight: 700;
+    font-size: 17px;
+    background-color: #5274a7;
+    border-radius: 10px;
+    border: 1px solid #d0e0d0;
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
 }
 @media (min-width: 768px) {
-   #contact {
-      .showInfo {
-         font-size: 17px;
-      }
-      .contact-with-me {
-         font-size: 27px;
-         margin-top: 30px;
-      }
-      h4 {
-         font-size: 18px;
-         margin: 70px 0;
-      }
-   }
-   form {
-      padding: 30px 60px;
-      width: 65%;
-      margin: 0 auto;
-      label {
-         font-size: 20px;
-      }
-      input,
-      textarea {
-         font-size: 17px;
-      }
-      textarea {
-         height: 7em;
-      }
-   }
+  #contact {
+    .showInfo {
+      font-size: 17px;
+    }
+    .contact-with-me {
+      font-size: 27px;
+      margin-top: 30px;
+    }
+    h4 {
+      font-size: 18px;
+      margin: 70px 0;
+    }
+  }
+  form {
+    padding: 30px 60px;
+    width: 65%;
+    margin: 0 auto;
+    label {
+      font-size: 20px;
+    }
+    input,
+    textarea {
+      font-size: 17px;
+    }
+    textarea {
+      height: 7em;
+    }
+  }
 }
