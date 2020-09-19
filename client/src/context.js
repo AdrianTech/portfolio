@@ -9,6 +9,7 @@ export class ContextProvider extends Component {
     message: "",
     info: {},
     counter: 2,
+    isSending: false,
   };
   handleBtnStart = (e) => {
     const navTarget = e.target.className;
@@ -50,6 +51,9 @@ export class ContextProvider extends Component {
     e.preventDefault();
     const { message, counter } = this.state;
     if (!this.validateForm()) return;
+    this.setState({
+      isSending: true,
+    });
     const data = new FormData();
     data.append("message", message);
     fetch("https://emails.adriantech.eu/emailHandler.php", {
@@ -60,6 +64,7 @@ export class ContextProvider extends Component {
         this.setState({
           info: { txt: "Twoja wiadomość została wysłana", response: true },
           message: "",
+          isSending: false,
         });
         this.handleTimeout();
         return res;
@@ -68,6 +73,7 @@ export class ContextProvider extends Component {
           info: {
             txt: "Coś poszło nie tak, spróbuj ponownie",
             response: false,
+            isSending: false,
           },
           counter: counter + 1,
         });
@@ -104,7 +110,7 @@ export class ContextProvider extends Component {
   };
 
   render() {
-    const { isClicked, moveNavbar, message, info } = this.state;
+    const { isClicked, moveNavbar, message, info, isSending } = this.state;
     const { handleBtnStart, changeNav, handleScroll, handleForm, handleSubmit, navigation } = this;
 
     return (
@@ -114,6 +120,7 @@ export class ContextProvider extends Component {
           moveNavbar,
           message,
           info,
+          isSending,
           handleForm,
           handleSubmit,
           handleBtnStart,

@@ -2,7 +2,7 @@ import React from "react";
 import { Context } from "../context";
 
 const Contact = () => {
-  const { message, handleSubmit, handleForm, info } = React.useContext(Context);
+  const { message, handleSubmit, handleForm, info, isSending } = React.useContext(Context);
   let infoStyle = "showInfo";
   if (info.response) infoStyle += " resultOk";
   else if (info.response === false) infoStyle += " resultFalse";
@@ -25,8 +25,8 @@ const Contact = () => {
               <p>{info.txt}</p>
             </div>
           )}
-          <button disabled={typeof info.response === "boolean"} className="form-btn">
-            Wyślij
+          <button disabled={isSending} className="form-btn">
+            {isSending ? "Wysyłanie..." : "Wyślij wiadomość"}
           </button>
         </form>
       </section>
