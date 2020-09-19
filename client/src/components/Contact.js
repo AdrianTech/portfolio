@@ -1,9 +1,8 @@
-import React, { useContext, useState } from "react";
+import React from "react";
 import { Context } from "../context";
 
 const Contact = () => {
-  const { message, handleSubmit, handleForm, info } = useContext(Context);
-  const [isVisible, showPhoneNumber] = useState(false);
+  const { message, handleSubmit, handleForm, info } = React.useContext(Context);
   let infoStyle = "showInfo";
   if (info.response) infoStyle += " resultOk";
   else if (info.response === false) infoStyle += " resultFalse";
@@ -14,13 +13,8 @@ const Contact = () => {
           <span /> Kontakt
         </h2>
         <div className="contact-with-me">
-          {!isVisible && <span onClick={() => showPhoneNumber(true)}>Kliknij, by zobaczyć dane kontaktowe</span>}
-          {isVisible && (
-            <>
-              <i className="fas fa-mobile-alt" /> +48 579 066 723 <br></br> <i className="far fa-envelope"></i>
-              <a href="mailto:dev@adriantech.eu">dev@adriantech.eu</a>
-            </>
-          )}
+          <i className="fas fa-mobile-alt" /> +48 579 066 723 <br></br> <i className="far fa-envelope"></i>
+          <a href="mailto:dev@adriantech.eu">dev@adriantech.eu</a>
         </div>
         <h4>Lub wyślij wiadomość</h4>
         <form onSubmit={handleSubmit}>

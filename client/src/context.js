@@ -48,48 +48,40 @@ export class ContextProvider extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const { name, getContact, message, counter } = this.state;
+    const { message, counter } = this.state;
     if (!this.validateForm()) return;
-    const data = {
-      name,
-      getContact,
-      message,
-    };
-    fetch("/sendMail", {
+    const data = new FormData();
+    data.append("message", message);
+    fetch("https://emails.adriantech.eu/emailHandler.php", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
-      .then((res) => {
-        if (res.ok) {
-          this.setState({
-            info: { txt: "Twoja wiadomość została wysłana", response: true },
-            message: "",
-          });
-          this.handleTimeout();
-          return res;
-        } else {
+      body: data,
+    }).then((res) => {
+      if (res.ok) {
+        this.setState({
+          info: { txt: "Twoja wiadomość została wysłana", response: true },
+          message: "",
+        });
+        this.handleTimeout();
+        return res;
+      } else {
+        this.setState({
+          info: {
+            txt: "Coś poszło nie tak, spróbuj ponownie",
+            response: false,
+          },
+          counter: counter + 1,
+        });
+        if (counter > 3) {
           this.setState({
             info: {
-              txt: "Coś poszło nie tak, spróbuj ponownie",
+              txt: "Występuje jakiś błąd. Proszę, skontaktuj się ze mną telefonicznie",
               response: false,
             },
-            counter: counter + 1,
           });
-          if (counter > 3) {
-            this.setState({
-              info: {
-                txt: "Występuje jakiś błąd. Proszę, skontaktuj się ze mną telefonicznie",
-                response: false,
-              },
-            });
-          }
-          this.handleTimeout();
         }
-      })
-      .catch((err) => err);
+        this.handleTimeout();
+      }
+    });
   };
   handleTimeout = () => {
     setTimeout(() => {
