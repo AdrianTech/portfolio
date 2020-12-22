@@ -1,16 +1,17 @@
 ### Technology stack
 
--  HTML
--  SCSS
--  React.js
--  Context API
--  React Hooks
--  Mobile-first
--  Node.js/Express
--  Nodemailer
+- HTML
+- SCSS
+- Mobile-first
+- React.js
+- Context API
+- React Hooks
+- Apollo server
+- GraphQl
+- Headless CMS
 
 #### Description
 
-My portfolio website. Another example of using JS library React, React Hooks, Context API and Nodemailer is used for sending emails from server-side.
+My portfolio website. Another example of using JS library React, React Hooks, Context API, and GraphQl for communicating with external API.
 
 #### [AdrianTech](https://adriantech.eu)
