@@ -1,27 +1,12 @@
 import React from "react";
-import { useQuery, gql } from "@apollo/client";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Project from "./Project";
-const services = gql`
-  query getServices {
-    services {
-      id
-      name
-      body
-      externalUrl
-      githubUrl
-      image {
-        url
-      }
-    }
-  }
-`;
+import { UserContext } from "../store/getData";
 
 const Projects = () => {
-  const { loading, data } = useQuery(services);
+  const { loading, user } = React.useContext(UserContext);
   let servicesData;
-
   React.useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     const examples = document.querySelectorAll(".example");
@@ -57,8 +42,7 @@ const Projects = () => {
       );
     });
   }, [loading]);
-  if (!loading) servicesData = data.services.map((item) => <Project key={item.id} {...item} />);
-
+  if (!loading) servicesData = user.services.map((item) => <Project key={item.id} {...item} />);
   return (
     <section id="projects">
       <h2>Projekty</h2>

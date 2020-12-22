@@ -10,7 +10,7 @@ h2 {
 
 #about {
   padding: 0 4%;
-  margin: 20px 0 50px 0;
+  margin: 20px 0;
   overflow: hidden;
   h3,
   h4 {
@@ -28,7 +28,7 @@ h2 {
 }
 .introduce-myself {
   flex-direction: column;
-
+  display: flex;
   .foto {
     width: 160px;
     height: 250px;
@@ -49,17 +49,32 @@ h2 {
   }
 }
 .text-about {
-  flex-basis: 70%;
-  font-family: "Lato";
-  line-height: 1.7;
-  font-size: 17px;
-  p:first-child {
-    margin-bottom: 30px;
-  }
-  p a {
-    text-decoration: none;
-    color: #91caf0;
+  margin: 15px auto;
+  width: 100%;
+  .carousel {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    font-size: 1.2rem;
     font-weight: 700;
+    color: #fafce4;
+    width: 100%;
+  }
+  .sliders {
+    padding-bottom: 15px;
+  }
+  .dots {
+    .dot {
+      width: 33px;
+      height: 10px;
+      margin: 7px;
+      border-radius: 5px;
+    }
+    .carousel__dot--selected {
+      background-color: #efff5d;
+      box-shadow: 0 0 1px 3px rgba(238, 255, 139, 0.25);
+    }
   }
 }
 .technology-stack {
@@ -77,16 +92,15 @@ h2 {
       font-size: 30px;
       text-align: center;
       margin-bottom: 20px;
+      margin-top: 5%;
     }
     h4 {
       font-size: 25px;
     }
   }
   .introduce-myself {
-    flex-direction: row;
     margin: 0 auto;
     width: 80%;
-
     .foto {
       flex-basis: 20%;
       height: 500px;
@@ -96,10 +110,16 @@ h2 {
     }
   }
   .text-about {
-    line-height: 1.7;
-    padding: 70px 50px;
-    flex-basis: 80%;
-    font-size: 18px;
+    width: 80%;
+    .carousel {
+      font-size: 1.5rem;
+    }
+    .dots .dot {
+      width: 40px;
+    }
+    // .sliders {
+    //   line-height: 40px;
+    // }
   }
   .technology-stack h2 {
     font-size: 40px;
@@ -107,11 +127,5 @@ h2 {
   .contact-nav {
     font-weight: 700;
     font-size: 23px;
-  }
-}
-@media screen and (min-width: 1000px) {
-  .text-about {
-    font-size: 19px;
-    line-height: 2;
   }
 }

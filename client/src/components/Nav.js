@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Context } from "../context";
+import { Context } from "../store/context";
 import logo from "../images/short-logo.png";
 
 const Nav = () => {

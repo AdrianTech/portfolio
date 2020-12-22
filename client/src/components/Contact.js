@@ -1,5 +1,5 @@
 import React from "react";
-import { Context } from "../context";
+import { Context } from "../store/context";
 
 const Contact = () => {
   const { message, handleSubmit, handleForm, info, isSending } = React.useContext(Context);
@@ -13,8 +13,14 @@ const Contact = () => {
           <span /> Kontakt
         </h2>
         <div className="contact-with-me">
-          <i className="fas fa-mobile-alt" /> +48 579 066 723 <br></br> <i className="far fa-envelope"></i>
-          <a href="mailto:dev@adriantech.eu">dev@adriantech.eu</a>
+          <div className="contact-type">
+            <i className="fas fa-mobile-alt"></i>
+            <a href="tel:+48579066723">579 066 723</a>
+          </div>
+          <div className="contact-type">
+            <i className="far fa-envelope"></i>
+            <a href="mailto:dev@adriantech.eu">dev@adriantech.eu</a>
+          </div>
         </div>
         <h4>Lub wyślij wiadomość</h4>
         <form onSubmit={handleSubmit}>
@@ -26,7 +32,7 @@ const Contact = () => {
             </div>
           )}
           <button disabled={isSending} className="form-btn">
-            {isSending ? "Wysyłanie..." : "Wyślij wiadomość"}
+            {isSending ? "Wysyłanie..." : "Wyślij"}
           </button>
         </form>
       </section>

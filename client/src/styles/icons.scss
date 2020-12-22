@@ -5,6 +5,7 @@
   .items,
   .smaller-items {
     font-weight: 500;
+    cursor: pointer;
   }
   .animated {
     padding-bottom: 5px;
@@ -23,27 +24,28 @@
       content: "Mobile-first\ASass\AGulp\A Flex/Grid";
     }
     &:nth-child(3)::after {
-      content: "ES6+\AOOP\AREST API\ATypeScript";
+      content: "ESNext\AOOP\AREST API\ATypeScript\A Axios";
     }
     &:nth-child(4)::after {
       content: "Gatsby.js\AReact-Router\A Context API\AReact Hooks\ARedux";
       font-size: 12px;
     }
     &:nth-child(5)::after {
-      content: "Express.js\AMongoDB\AJWT";
+      content: "Vuex\AVue Router";
     }
     &:nth-child(6)::after {
-      content: "Atom\A CodeSandbox";
+      content: "Express.js\AMongoDB\AMongoose\AJWT";
     }
     &:nth-child(7)::after {
       content: "Github";
     }
     &:nth-child(8)::after {
-      content: "GraphQL\AVue.js\AWordpress\AWebpack";
+      content: "GraphQL\APHP\AWordpress\AWebpack\A CI/CD\AVSCode";
     }
     &::after {
       content: "";
       display: block;
+      height: 0;
       color: #f5e6e6;
       width: 120px;
       margin: 5px auto;
@@ -53,11 +55,12 @@
       opacity: 0;
       padding: 7px 0;
       text-align: center;
-      font-size: 14px;
+      font-size: 13px;
       transition: all 0.3s linear;
     }
     &:hover::after {
       opacity: 1;
+      height: auto;
     }
   }
   .items {
@@ -85,8 +88,13 @@
         font-style: normal;
       }
     }
-    .animated:last-child {
-      margin-top: -7px;
+    .animated {
+      &::after {
+        height: auto;
+      }
+      &:last-child {
+        margin-top: -7px;
+      }
     }
   }
 }

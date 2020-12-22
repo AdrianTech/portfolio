@@ -1,3 +1,4 @@
+$grey-border: #424242;
 #contact {
   padding: 0 5%;
   .showInfo {
@@ -15,19 +16,40 @@
     color: #77f577;
     border: 2px solid #016e01;
   }
+  .contact-with-me,
+  a {
+    color: #fae4d0;
+  }
   .contact-with-me {
     font-size: 20px;
     margin-bottom: 20px;
-    color: peachpuff;
+    // margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    .contact-type {
+      display: grid;
+      width: 100%;
+      grid-template-columns: 15% 85%;
+      border: 2px solid $grey-border;
+      margin-bottom: 8px;
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+    i,
     a {
-      color: peachpuff;
-      text-decoration: none;
+      padding: 5px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
     }
     i {
-      margin-right: 20px;
+      border-right: 2px solid $grey-border;
+      line-height: 30px;
     }
-    span {
-      cursor: pointer;
+    a {
+      text-align: center;
+      text-decoration: none;
     }
   }
   h4 {
@@ -86,6 +108,12 @@ form {
     }
   }
 }
+@media (min-width: 480px) {
+  #contact .contact-with-me .contact-type {
+    width: 300px;
+    grid-template-columns: 20% 80%;
+  }
+}
 @media (min-width: 768px) {
   #contact {
     .showInfo {
@@ -93,7 +121,10 @@ form {
     }
     .contact-with-me {
       font-size: 27px;
-      margin-top: 30px;
+      margin-top: 40px;
+      .contact-type {
+        width: 370px;
+      }
     }
     h4 {
       font-size: 18px;

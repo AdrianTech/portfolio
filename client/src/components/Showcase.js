@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Context } from "../context";
+import { Context } from "../store/context";
 import { ReactComponent as Logo } from "../images/LOGO_LIGHT.svg";
 import gsap from "gsap";
 
@@ -7,12 +7,9 @@ const Showcase = () => {
   const { handleBtnStart, changeNav, isClicked, moveNavbar, navigation } = useContext(Context);
   let navBehavior = "desktop";
   React.useEffect(() => {
-    let tl = gsap.timeline({ defaults: { duration: 0.9 } });
-    tl.from(".fromTop", { y: -50, stagger: 0.5, autoAlpha: 0, delay: 1 }).from(".start", { scale: 0 }, "-=0.5").to(".disappear", { autoAlpha: 0, duration: 1, xPercent: -200 }, "+=7");
+    gsap.to(".disappear", { autoAlpha: 0, duration: 1, xPercent: -200, delay: 7 });
   }, []);
-  if (moveNavbar) {
-    navBehavior += " showNavbar";
-  }
+  if (moveNavbar) navBehavior += " showNavbar";
   return (
     <div id="showcase">
       <header className={navBehavior}>

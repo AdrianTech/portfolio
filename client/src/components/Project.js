@@ -1,6 +1,5 @@
 import React from "react";
-const Project = (props) => {
-  const { externalUrl, body, image, name, githubUrl } = props;
+const Project = ({ externalUrl, body, image, name, githubUrl }) => {
   return (
     <>
       <div className="example">

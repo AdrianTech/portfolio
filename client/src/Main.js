@@ -6,13 +6,13 @@ import Contact from "./components/Contact";
 import Nav from "./components/Nav";
 import Services from "./components/Services";
 import Footer from "./components/Footer";
-import ContextProvider from "./context";
-import { BrowserRouter as Router } from "react-router-dom";
+import ContextProvider from "./store/context";
+import { UserProvider } from "./store/getData";
 
 const Main = () => {
   return (
     <ContextProvider>
-      <Router>
+      <UserProvider>
         <div className="main">
           <Nav />
           <Showcase />
@@ -22,7 +22,7 @@ const Main = () => {
           <Contact />
           <Footer />
         </div>
-      </Router>
+      </UserProvider>
     </ContextProvider>
   );
 };
