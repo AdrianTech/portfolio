@@ -25,7 +25,7 @@ const Nav = () => {
           <ul style={isClicked ? style : null} className={anim}>
             <li onClick={() => navigation("showcase")}>Home</li>
             <li onClick={() => navigation("about")}>O mnie</li>
-            <li onClick={() => navigation("projects")}>Projekty</li>
+            <li onClick={() => navigation("technologies")}>Technologie</li>
             <li onClick={() => navigation("services")}>Usługi</li>
             <li onClick={() => navigation("contact")}>Kontakt</li>
           </ul>

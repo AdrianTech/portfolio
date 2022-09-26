@@ -1,7 +1,7 @@
 import React from "react";
 import Showcase from "./components/Showcase";
 import About from "./components/About";
-import Projects from "./components/Projects";
+// import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Nav from "./components/Nav";
 import Services from "./components/Services";
@@ -17,7 +17,7 @@ const Main = () => {
           <Nav />
           <Showcase />
           <About />
-          <Projects />
+          {/* <Projects /> */}
           <Services />
           <Contact />
           <Footer />

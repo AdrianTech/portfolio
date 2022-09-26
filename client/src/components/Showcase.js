@@ -18,7 +18,7 @@ const Showcase = () => {
         </div>
         <nav>
           <span onClick={() => navigation("about")}>O mnie</span>
-          <span onClick={() => navigation("projects")}>Projekty</span>
+          <span onClick={() => navigation("technologies")}>Technologie</span>
           <span onClick={() => navigation("services")}>Usługi</span>
           <span onClick={() => navigation("contact")}>Kontakt</span>
         </nav>

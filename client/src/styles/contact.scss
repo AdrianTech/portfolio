@@ -1,25 +1,14 @@
 $grey-border: #424242;
+
 #contact {
   padding: 0 5%;
-  .showInfo {
-    font-size: 14px;
-    border-radius: 7px;
-    padding: 5px 10px;
-    font-weight: 700;
-    background-color: #1b1b1b;
-  }
-  .resultFalse {
-    border: 2px solid #a80324;
-    color: #e92c52;
-  }
-  .resultOk {
-    color: #77f577;
-    border: 2px solid #016e01;
-  }
+  margin-bottom: 100px;
+
   .contact-with-me,
   a {
     color: #fae4d0;
   }
+
   .contact-with-me {
     font-size: 20px;
     margin-bottom: 20px;
@@ -28,6 +17,7 @@ $grey-border: #424242;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+
     .contact-type {
       display: grid;
       width: 100%;
@@ -36,6 +26,7 @@ $grey-border: #424242;
       margin-bottom: 8px;
       background-color: rgba(255, 255, 255, 0.05);
     }
+
     i,
     a {
       padding: 5px;
@@ -43,15 +34,18 @@ $grey-border: #424242;
       display: flex;
       justify-content: center;
     }
+
     i {
       border-right: 2px solid $grey-border;
       line-height: 30px;
     }
+
     a {
       text-align: center;
       text-decoration: none;
     }
   }
+
   h4 {
     margin: 50px;
     text-align: center;
@@ -60,88 +54,49 @@ $grey-border: #424242;
     opacity: 0.6;
   }
 }
-form {
-  flex-direction: column;
-  padding-bottom: 30px;
-  & > * {
-    margin: 5px;
-  }
-  label {
-    margin-top: 13px;
-    font-size: 16px;
-    color: #5274a7;
-  }
-  input,
-  textarea {
-    font-family: "Poppins";
-    padding: 7px 0;
-    font-size: 16px;
-    border: none;
-    border-bottom: 2px solid #ada1a1;
-    color: beige;
-    background-color: transparent;
-    outline: none;
-    &::placeholder {
-      font-style: italic;
-      font-size: 15px;
-    }
-  }
-  textarea {
-    height: 10em;
-    font-size: 15px;
-  }
-  .form-btn {
-    font-family: "Poppins";
-    margin-top: 20px;
-    width: 50%;
-    padding: 5px 0px;
-    color: #000;
-    outline: none;
-    font-weight: 700;
-    font-size: 16px;
-    background-color: #5c90df;
-    border-radius: 10px;
-    border: 1px solid #d0e0d0;
-    display: inline-block;
-    &:disabled {
-      opacity: 0.8;
-    }
-  }
-}
+
 @media (min-width: 480px) {
   #contact .contact-with-me .contact-type {
     width: 300px;
     grid-template-columns: 20% 80%;
   }
 }
+
 @media (min-width: 768px) {
   #contact {
     .showInfo {
       font-size: 17px;
     }
+
     .contact-with-me {
       font-size: 27px;
       margin-top: 40px;
+
       .contact-type {
         width: 370px;
       }
     }
+
     h4 {
       font-size: 18px;
       margin: 70px 0;
     }
   }
+
   form {
     padding: 30px 60px;
     width: 65%;
     margin: 0 auto;
+
     label {
       font-size: 20px;
     }
+
     input,
     textarea {
       font-size: 17px;
     }
+
     textarea {
       height: 7em;
     }

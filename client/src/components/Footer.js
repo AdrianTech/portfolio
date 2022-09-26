@@ -2,7 +2,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer>
-      <p>AdrianTech &copy; 2020</p>
+      <p>AdrianTech &copy; 2022</p>
     </footer>
   );
 };

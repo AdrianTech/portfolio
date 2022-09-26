@@ -19,7 +19,7 @@ const About = () => {
         <AboutDescCarousel />
         <SocialMedia />
       </div>
-      <div className="technology-stack">
+      <div id="technologies" className="technology-stack">
         <h2>Technologie</h2>
         <div className="icons">
           <ScrollAnimation animateOnce={true} animateIn="flip" delay={200}>
