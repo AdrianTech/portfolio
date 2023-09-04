@@ -14,7 +14,7 @@ const Contact = () => {
           </div>
           <div className="contact-type">
             <i className="far fa-envelope"></i>
-            <a href="mailto:dev@adriantech.eu">dev@adriantech.eu</a>
+            <a href="mailto:adriantech85@gmail.com">adriantech85@gmail.com</a>
           </div>
         </div>
       </section>

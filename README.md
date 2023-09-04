@@ -14,4 +14,4 @@
 
 My portfolio website. Another example of using JS library React, React Hooks, Context API, and GraphQl for communicating with external API.
 
-#### [AdrianTech](https://adriantech.eu)
+#### [AdrianTech](https://adrian-tech.netlify.app)
